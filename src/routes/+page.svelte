@@ -1,24 +1,17 @@
 <script>
-	let a = 1;
+	const getRandomUser = async () => {
+		var response = await fetch('https://randomuser.me/api/');
+		var result = await response.json();
+		return result;
+	};
 
-	function func() {
-		a++;
-	}
+	let userPromise = getRandomUser();
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<div class="divers">
-    <span> testing </span>
-	<button on:click={func}>{a}</button>
-</div>
-
-<style>
-	.divers {
-		background-color: lightblue;
-        display: flex;
-        border-radius: 8px;
-        width: auto;
-        justify-content: center;
-	}
-</style>
+{#await userPromise}
+	<h2>Loading...</h2>
+{:then users}
+	<h2>{users.results[0].name.first}</h2>
+{:catch err}
+	<h2>xd??</h2>
+{/await}

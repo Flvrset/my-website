@@ -49,7 +49,7 @@
 	}
 
 	.aboutme {
-		height: 100vh;
+		height: 90vh;
 		background-color: aquamarine;
 	}
 	.container {

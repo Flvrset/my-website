@@ -12,8 +12,8 @@
 <nav>
 	<ul class="navbar">
 		<a href="#hero" on:click|preventDefault={scrollIntoView}>Home</a>
-		<a href="#about-me" on:click|preventDefault={scrollIntoView}>O mnie!</a>
-		<a href="#experience" on:click|preventDefault={scrollIntoView}>Doświadczenie</a>
+		<a href="#about-me" style="margin-left: 30px" on:click|preventDefault={scrollIntoView}>O mnie!</a>
+		<a href="#experience" style="margin-left: 30px" on:click|preventDefault={scrollIntoView}>Doświadczenie</a>
 		<a href="#contact" on:click|preventDefault={scrollIntoView}>Kontakt</a>
 	</ul>
 </nav>
@@ -39,13 +39,13 @@
 
 	nav {
 		position: fixed;
-		top: 43vh;
+		top: 35vh;
 
 		.navbar {
 			display: flex;
 			align-items: flex-start;
 			flex-direction: column;
-			gap: 20px;
+			gap: 60px;
 
 			a {
 				color: black;

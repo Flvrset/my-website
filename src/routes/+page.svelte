@@ -11,8 +11,9 @@
 
 <nav>
 	<ul class="navbar">
-		<a href="#hero" on:click|preventDefault={scrollIntoView}>O mnie</a>
-		<a href="#about-me" on:click|preventDefault={scrollIntoView}>Doświadczenie</a>
+		<a href="#hero" on:click|preventDefault={scrollIntoView}>Home</a>
+		<a href="#about-me" on:click|preventDefault={scrollIntoView}>O mnie!</a>
+		<a href="#experience" on:click|preventDefault={scrollIntoView}>Doświadczenie</a>
 		<a href="#contact" on:click|preventDefault={scrollIntoView}>Kontakt</a>
 	</ul>
 </nav>
@@ -24,22 +25,9 @@
 		</div>
 	</div>
 </section>
-<section class="container aboutme" id="about-me">
-	<div class="hero">
-		<div class="hero__about--top">Joanna Kominiak</div>
-		<div class="hero__image">
-			<img src={Hero} style="size: 2px;" alt="hero" />
-		</div>
-	</div>
-</section>
-<section class="container" id="contact">
-	<div class="hero">
-		<div class="hero__about--top">Joanna Kominiak</div>
-		<div class="hero__image">
-			<img src={Hero} style="size: 2px;" alt="hero" />
-		</div>
-	</div>
-</section>
+<section class="container aboutme" id="about-me">o mnie</section>
+<section class="container" id="experience">Doświadczenie</section>
+<section class="container" id="contact">kontakt</section>
 
 <style lang="scss">
 	:global(body) {
@@ -50,8 +38,8 @@
 	}
 
 	nav {
-		position:fixed;
-		top: 50vh;
+		position: fixed;
+		top: 43vh;
 
 		.navbar {
 			display: flex;
@@ -72,7 +60,6 @@
 		}
 	}
 	.hero {
-		background-color: whitesmoke;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -90,12 +77,14 @@
 	}
 
 	.aboutme {
-		height: 90vh;
-		background-color: aquamarine;
+		height: 100vh;
 	}
 	.container {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
 		width: 100%;
 		padding-left: 15px;
 		padding-right: 15px;

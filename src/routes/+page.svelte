@@ -1,26 +1,45 @@
 <script lang="ts">
 	import Hero from '$lib/assets/hero.jpg';
-	9 ? 's' : 'b';
+
+	function scrollIntoView({ target }: any) {
+		const element = document.querySelector(target.getAttribute('href'));
+		element.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
 </script>
 
-<div class="hero">
-	<nav>
-		<ul>
-			<li>O mnie</li>
-			<li>Doświadczenie</li>
-			<li>Kontakt</li>
-		</ul>
-	</nav>
-	<div class="container">
-		<div class="hero">
-			<div class="hero__about--top">Joanna Kominiak</div>
-			<div class="hero__image">
-				<img src={Hero} style="size: 2px;" alt="hero" />
-			</div>
+<nav>
+	<ul class="navbar">
+		<a href="#hero" on:click|preventDefault={scrollIntoView}>O mnie</a>
+		<a href="#about-me" on:click|preventDefault={scrollIntoView}>Doświadczenie</a>
+		<a href="#contact" on:click|preventDefault={scrollIntoView}>Kontakt</a>
+	</ul>
+</nav>
+<section class="container" id="hero">
+	<div class="hero">
+		<div class="hero__about--top">Joanna Kominiak</div>
+		<div class="hero__image">
+			<img src={Hero} style="size: 2px;" alt="hero" />
 		</div>
 	</div>
-</div>
-<section class="aboutme" />
+</section>
+<section class="container aboutme" id="about-me">
+	<div class="hero">
+		<div class="hero__about--top">Joanna Kominiak</div>
+		<div class="hero__image">
+			<img src={Hero} style="size: 2px;" alt="hero" />
+		</div>
+	</div>
+</section>
+<section class="container" id="contact">
+	<div class="hero">
+		<div class="hero__about--top">Joanna Kominiak</div>
+		<div class="hero__image">
+			<img src={Hero} style="size: 2px;" alt="hero" />
+		</div>
+	</div>
+</section>
 
 <style lang="scss">
 	:global(body) {
@@ -29,11 +48,29 @@
 		padding: 0;
 		height: 100%;
 	}
-	img {
-		width: 500px;
-		border-radius: 8px;
-	}
 
+	nav {
+		position:fixed;
+		top: 50vh;
+
+		.navbar {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 20px;
+
+			a {
+				color: black;
+				font-weight: 400;
+				text-decoration: none;
+
+				&:hover {
+					transform: scale(1.5);
+					transition: transform 30ms ease-in-out;
+				}
+			}
+		}
+	}
 	.hero {
 		background-color: whitesmoke;
 		display: flex;
@@ -46,6 +83,10 @@
 				font-size: 50px;
 			}
 		}
+		img {
+			width: 500px;
+			border-radius: 8px;
+		}
 	}
 
 	.aboutme {
@@ -53,10 +94,13 @@
 		background-color: aquamarine;
 	}
 	.container {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 		padding-left: 15px;
 		padding-right: 15px;
 		margin-left: auto;
 		margin-right: auto;
+		height: 100vh;
 	}
 </style>

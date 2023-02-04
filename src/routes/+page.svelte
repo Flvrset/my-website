@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Hero from '$lib/assets/hero.jpg'
+	import Hero from '/src/static/hero.jpg'
 	import Obiekt from "$lib/components/object.svelte"
 
 	function scrollIntoView({ target }: any) {

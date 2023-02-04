@@ -2,13 +2,15 @@
 	import { Canvas, InteractiveObject, OrbitControls, T } from '@threlte/core'
 	import { spring } from 'svelte/motion'
 	import { degToRad } from 'three/src/math/MathUtils'
+	import { GLTF } from '@threlte/extras';
 
 	const scale = spring(1)
+	const url = "/src/static/untitled.glb"
 </script>
 
 <div>
 	<Canvas>
-		<T.PerspectiveCamera makeDefault position={[10, 10, 10]} fov={24}>
+		<T.PerspectiveCamera makeDefault position={[10, 10, 10]} fov={40}>
 			<OrbitControls maxPolarAngle={degToRad(80)} enableZoom={false} target={{ y: 0.5 }} />
 		</T.PerspectiveCamera>
 
@@ -37,12 +39,15 @@
 			<T.CircleGeometry args={[3, 72]} />
 			<T.MeshStandardMaterial color="white" />
 		</T.Mesh>
+		<GLTF {url} position.y={0.5}/>
 	</Canvas>
 </div>
 
 <style>
 	div {
-		height: 100%;
+		position: fixed;
+		bottom: 0;
+		height: 10%;
 		width: 100%;
 	}
 </style>

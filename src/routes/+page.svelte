@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Hero from '$lib/assets/hero.jpg';
+	import Hero from '$lib/assets/hero.jpg'
+	import Obiekt from "$lib/components/object.svelte"
 
 	function scrollIntoView({ target }: any) {
 		const element = document.querySelector(target.getAttribute('href'));
@@ -37,6 +38,7 @@
 <section class="container aboutme" id="about-me">o mnie</section>
 <section class="container" id="experience">Doświadczenie</section>
 <section class="container" id="contact">kontakt</section>
+<Obiekt/>
 
 <style lang="scss">
 	:global(body) {

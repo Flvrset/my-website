@@ -5,7 +5,7 @@
 	import { GLTF } from '@threlte/extras';
 
 	const scale = spring(1)
-	const url = "/src/static/untitled.glb"
+	const url = "/src/static/images/untitled.glb"
 </script>
 
 <div>

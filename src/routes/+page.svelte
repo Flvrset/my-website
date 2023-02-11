@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Hero from '/src/static/hero.jpg'
+	import Hero from '/src/static/images/hero.jpg'
 	import Obiekt from "$lib/components/object.svelte"
+	import '../static/fonts/fonts.css'
 
 	function scrollIntoView({ target }: any) {
 		const element = document.querySelector(target.getAttribute('href'));
@@ -62,6 +63,7 @@
 				color: black;
 				font-weight: 400;
 				text-decoration: none;
+				cursor: default;
 
 				&:hover {
 					transform: scale(1.5);
@@ -81,7 +83,7 @@
 			flex-direction: column;
 			gap: 15px;
 			&--top {
-				font-family: Ivar Text, sans-serif;
+				font-family: ClashDisplay-Medium, sans-serif;
 				font-weight: 600;
 				font-size: 70px;
 				letter-spacing: -0.2px;
@@ -114,17 +116,6 @@
 		height: 100vh;
 	}
 
-	@font-face {
-		font-family: 'Ivar Text';
-		src: url('//db.onlinewebfonts.com/t/22aff4497483f2c6a5e001453850b935.eot');
-		src: url('//db.onlinewebfonts.com/t/22aff4497483f2c6a5e001453850b935.eot?#iefix')
-				format('embedded-opentype'),
-			url('//db.onlinewebfonts.com/t/22aff4497483f2c6a5e001453850b935.woff2') format('woff2'),
-			url('//db.onlinewebfonts.com/t/22aff4497483f2c6a5e001453850b935.woff') format('woff'),
-			url('//db.onlinewebfonts.com/t/22aff4497483f2c6a5e001453850b935.ttf') format('truetype'),
-			url('//db.onlinewebfonts.com/t/22aff4497483f2c6a5e001453850b935.svg#Ivar Text Hydro')
-				format('svg');
-	}
 	@font-face {
 		font-family: 'DM Sans';
 		src: url('//db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.eot');

@@ -34,9 +34,12 @@
 	</div>
 </section>
 <section class="container" id="about-me">
-	<div class="aboutme">
-		<div class="aboutme__top">
+	<div class="about">
+		<div class="about__top">
 			Pracować mądrzej,<br/> uwalniać od absurdu.
+		</div>
+		<div class="about__bottom">
+			Jestem Trenerem wewnętrznym. Samodzielnie stworzyłam autorską koncepcję rozwoju Pracowników back office w organizacji. Skonstruowałam i prowadzę własne szkolenia wewnętrzne z umiejętności miękkich w różnych obszarach, w tym cykl warsztatów dla Liderów. Moderując spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z impasu. Koordynuję kursy zewnętrzne.
 		</div>
 	</div>
 </section>
@@ -121,21 +124,29 @@
 		}
 	}
 
-	.aboutme {
+	.about {
 		display: flex;
-		justify-content: flex-start;
-		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
 		height: 658px;
 		width: 100%;
 		background: #0E0F19;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 		border-radius: 234px;
+		color: white;
+		gap: 50px;
 
 		&__top {
 			font-family: ClashDisplay-Medium, sans-serif;
-			color: white;
 			font-size: 64px;
 			margin-left: 90px;
+			line-height: 81%;
+		}
+
+		&__bottom {
+			font-family: DMSans-Regular, sans-serif;
+			margin: 0 90px 135px 90px;
 		}
 	}
 	.container {
@@ -148,5 +159,6 @@
 		margin-left: auto;
 		margin-right: auto;
 		height: 100vh;
+		max-width: calc(100% - 20px);
 	}
 </style>

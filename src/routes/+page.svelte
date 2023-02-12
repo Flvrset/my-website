@@ -1,7 +1,6 @@
 <script lang="ts">
-	import Hero from '/src/static/images/hero.jpg'
-	import Obiekt from "$lib/components/object.svelte"
-	import '../static/fonts/fonts.css'
+	import Obiekt from '$lib/components/object.svelte';
+	import '../static/fonts/fonts.css';
 
 	function scrollIntoView({ target }: any) {
 		const element = document.querySelector(target.getAttribute('href'));
@@ -30,16 +29,18 @@
 			<span class="hero__about--bottom"
 				>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
 			>
+			<div class="hero__about--buttons">
+				<a class="hero__about--buttons-contact" href="/contact">SKONTAKTUJ SIĘ ZE MNĄ</a>
+				<a class="hero__about--buttons-offers" href="/offers">ZOBACZ MOJĄ OFERTĘ</a>
+			</div>
 		</div>
-		<div class="hero__image">
-			<img src={Hero} style="size: 2px;" alt="hero" />
-		</div>
+		<div class="hero__image" />
 	</div>
 </section>
 <section class="container aboutme" id="about-me">o mnie</section>
 <section class="container" id="experience">Doświadczenie</section>
 <section class="container" id="contact">kontakt</section>
-<Obiekt/>
+<Obiekt />
 
 <style lang="scss">
 	:global(body) {
@@ -81,21 +82,47 @@
 		&__about {
 			display: flex;
 			flex-direction: column;
-			gap: 15px;
 			&--top {
 				font-family: ClashDisplay-Medium, sans-serif;
-				font-weight: 600;
-				font-size: 70px;
+				font-weight: 500;
+				font-size: 96px;
 				letter-spacing: -0.2px;
 			}
 			&--bottom {
-				font-family: 'DM Sans', sans-serif;
+				font-family: DMSans-Regular, sans-serif;
 				font-weight: 400;
+				font-size: 18px;
+				letter-spacing: 0.015rem;
+				line-height: 23px;
 			}
-		}
-		img {
-			width: 200px;
-			border-radius: 8px;
+			&--buttons {
+				display: flex;
+				gap: 16.55px;
+				margin-top: 23px;
+				a {
+					font-family: ClashDisplay-Medium, sans-serif;
+					color: white;
+					width: 253px;
+					height: 68px;
+					border-radius: 113px;
+					justify-content: center;
+					align-items: center;
+					text-decoration: none;
+					cursor: pointer;
+				}
+				&-contact {
+					display: flex;
+					background: #81a684;
+					letter-spacing: 0.065em;
+					font-size: 14px;
+				}
+				&-offers {
+					display: flex;
+					background: #466060;
+					letter-spacing: 0.07em;
+					font-size: 15px;
+				}
+			}
 		}
 	}
 
@@ -108,22 +135,9 @@
 		justify-content: center;
 		align-items: center;
 
-		width: 800px;
-		padding-left: 15px;
-		padding-right: 15px;
+		width: 1064px;
 		margin-left: auto;
 		margin-right: auto;
 		height: 100vh;
-	}
-
-	@font-face {
-		font-family: 'DM Sans';
-		src: url('//db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.eot');
-		src: url('//db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.eot?#iefix')
-				format('embedded-opentype'),
-			url('//db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.woff2') format('woff2'),
-			url('//db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.woff') format('woff'),
-			url('//db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.ttf') format('truetype'),
-			url('//db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.svg#DM Sans') format('svg');
 	}
 </style>

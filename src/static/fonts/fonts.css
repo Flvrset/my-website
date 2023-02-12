@@ -29,3 +29,33 @@
     font-display: swap;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'DMSans-Bold';
+    src: url('./dm-sans/DMSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DMSans-BoldItalic';
+    src: url('./dm-sans/DMSans-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DMSans-Italic';
+    src: url('./dm-sans/DMSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DMSans-Medium';
+    src: url('./dm-sans/DMSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DMSans-MediumItalic';
+    src: url('./dm-sans/DMSans-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DMSans-Regular';
+    src: url('./dm-sans/DMSans-Regular.ttf') format('truetype');
+}

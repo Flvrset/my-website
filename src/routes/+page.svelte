@@ -85,13 +85,13 @@
 			&--top {
 				font-family: ClashDisplay-Medium, sans-serif;
 				font-weight: 500;
-				font-size: 96px;
+				font-size: 6em;
 				letter-spacing: -0.2px;
 			}
 			&--bottom {
 				font-family: DMSans-Regular, sans-serif;
 				font-weight: 400;
-				font-size: 18px;
+				font-size: 1.125em;
 				letter-spacing: 0.015rem;
 				line-height: 23px;
 			}
@@ -114,13 +114,13 @@
 					display: flex;
 					background: #81a684;
 					letter-spacing: 0.065em;
-					font-size: 14px;
+					font-size: 0.875em;
 				}
 				&-offers {
 					display: flex;
 					background: #466060;
 					letter-spacing: 0.07em;
-					font-size: 15px;
+					font-size: 0.9375em;
 				}
 			}
 		}

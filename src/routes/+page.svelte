@@ -24,20 +24,22 @@
 </nav>
 <section class="container" id="hero">
 	<div class="hero">
-		<div class="hero__about">
-			<span class="hero__about--top">Joanna Kominiak</span>
-			<span class="hero__about--bottom"
-				>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
-			>
-			<div class="hero__about--buttons">
-				<a class="hero__about--buttons-contact" href="/contact">SKONTAKTUJ SIĘ ZE MNĄ</a>
-				<a class="hero__about--buttons-offers" href="/offers">ZOBACZ MOJĄ OFERTĘ</a>
-			</div>
+		<div class="hero__top">Joanna Kominiak</div>
+		<div class="hero__bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+		<div class="hero__buttons">
+			<a class="hero__buttons--contact" href="/contact">SKONTAKTUJ SIĘ ZE MNĄ</a>
+			<a class="hero__buttons--offers" href="/offers">ZOBACZ MOJĄ OFERTĘ</a>
 		</div>
 		<div class="hero__image" />
 	</div>
 </section>
-<section class="container aboutme" id="about-me">o mnie</section>
+<section class="container" id="about-me">
+	<div class="aboutme">
+		<div class="aboutme__top">
+			Pracować mądrzej,<br/> uwalniać od absurdu.
+		</div>
+	</div>
+</section>
 <section class="container" id="experience">Doświadczenie</section>
 <section class="container" id="contact">kontakt</section>
 <Obiekt />
@@ -75,59 +77,66 @@
 	}
 	.hero {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 50px;
-
-		&__about {
+		flex-direction: column;
+		&__top {
+			font-family: ClashDisplay-Medium, sans-serif;
+			font-weight: 500;
+			font-size: 6em;
+			letter-spacing: -0.2px;
+		}
+		&__bottom {
+			font-family: DMSans-Regular, sans-serif;
+			font-weight: 400;
+			font-size: 1.125em;
+			letter-spacing: 0.015rem;
+			line-height: 23px;
+		}
+		&__buttons {
 			display: flex;
-			flex-direction: column;
-			&--top {
+			gap: 16.55px;
+			margin-top: 23px;
+			a {
 				font-family: ClashDisplay-Medium, sans-serif;
-				font-weight: 500;
-				font-size: 6em;
-				letter-spacing: -0.2px;
+				color: white;
+				width: 253px;
+				height: 68px;
+				border-radius: 113px;
+				justify-content: center;
+				align-items: center;
+				text-decoration: none;
+				cursor: pointer;
 			}
-			&--bottom {
-				font-family: DMSans-Regular, sans-serif;
-				font-weight: 400;
-				font-size: 1.125em;
-				letter-spacing: 0.015rem;
-				line-height: 23px;
-			}
-			&--buttons {
+			&--contact {
 				display: flex;
-				gap: 16.55px;
-				margin-top: 23px;
-				a {
-					font-family: ClashDisplay-Medium, sans-serif;
-					color: white;
-					width: 253px;
-					height: 68px;
-					border-radius: 113px;
-					justify-content: center;
-					align-items: center;
-					text-decoration: none;
-					cursor: pointer;
-				}
-				&-contact {
-					display: flex;
-					background: #81a684;
-					letter-spacing: 0.065em;
-					font-size: 0.875em;
-				}
-				&-offers {
-					display: flex;
-					background: #466060;
-					letter-spacing: 0.07em;
-					font-size: 0.9375em;
-				}
+				background: #81a684;
+				letter-spacing: 0.065em;
+				font-size: 0.875em;
+			}
+			&--offers {
+				display: flex;
+				background: #466060;
+				letter-spacing: 0.07em;
+				font-size: 0.9375em;
 			}
 		}
 	}
 
 	.aboutme {
-		height: 100vh;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 658px;
+		width: 100%;
+		background: #0E0F19;
+		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
+		border-radius: 234px;
+
+		&__top {
+			font-family: ClashDisplay-Medium, sans-serif;
+			color: white;
+			font-size: 64px;
+			margin-left: 90px;
+		}
 	}
 	.container {
 		display: flex;

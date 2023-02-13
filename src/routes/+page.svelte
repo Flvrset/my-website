@@ -36,10 +36,21 @@
 <section class="container" id="about-me">
 	<div class="about">
 		<div class="about__top">
-			Pracować mądrzej,<br/> uwalniać od absurdu.
+			Pracować mądrzej,<br /> uwalniać od absurdu.
 		</div>
 		<div class="about__bottom">
-			Jestem Trenerem wewnętrznym. Samodzielnie stworzyłam autorską koncepcję rozwoju Pracowników back office w organizacji. Skonstruowałam i prowadzę własne szkolenia wewnętrzne z umiejętności miękkich w różnych obszarach, w tym cykl warsztatów dla Liderów. Moderując spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z impasu. Koordynuję kursy zewnętrzne.
+			Jestem Trenerem wewnętrznym. Samodzielnie stworzyłam autorską koncepcję rozwoju Pracowników
+			back office w organizacji. Skonstruowałam i prowadzę własne szkolenia wewnętrzne z
+			umiejętności miękkich w różnych obszarach, w tym cykl warsztatów dla Liderów. Moderując
+			spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z impasu. Koordynuję kursy
+			zewnętrzne.
+		</div>
+	</div>
+</section>
+<section style="background-color: #466060;">
+	<div class="container" style="height: 702px;">
+		<div class="">
+			<div class="about__top" style="color: white;">Certyfikaty</div>
 		</div>
 	</div>
 </section>
@@ -48,13 +59,7 @@
 <Obiekt />
 
 <style lang="scss">
-	:global(body) {
-		display: contents;
-		margin: 0;
-		padding: 0;
-		height: 100%;
-	}
-
+	@import '../lib/styling/style.scss';
 	nav {
 		position: fixed;
 		top: 35vh;
@@ -82,10 +87,7 @@
 		display: flex;
 		flex-direction: column;
 		&__top {
-			font-family: ClashDisplay-Medium, sans-serif;
-			font-weight: 500;
-			font-size: 6em;
-			letter-spacing: -0.2px;
+			@include h1();
 		}
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
@@ -99,15 +101,7 @@
 			gap: 16.55px;
 			margin-top: 23px;
 			a {
-				font-family: ClashDisplay-Medium, sans-serif;
-				color: white;
-				width: 253px;
-				height: 68px;
-				border-radius: 113px;
-				justify-content: center;
-				align-items: center;
-				text-decoration: none;
-				cursor: pointer;
+				@include button;
 			}
 			&--contact {
 				display: flex;
@@ -131,17 +125,15 @@
 		align-items: flex-start;
 		height: 658px;
 		width: 100%;
-		background: #0E0F19;
+		background: #0e0f19;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 		border-radius: 234px;
 		color: white;
 		gap: 50px;
 
 		&__top {
-			font-family: ClashDisplay-Medium, sans-serif;
-			font-size: 64px;
+			@include h2;
 			margin-left: 90px;
-			line-height: 81%;
 		}
 
 		&__bottom {

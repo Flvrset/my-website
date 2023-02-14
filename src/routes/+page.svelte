@@ -1,27 +1,8 @@
 <script lang="ts">
 	import Obiekt from '$lib/components/object.svelte';
 	import '../static/fonts/fonts.css';
-
-	function scrollIntoView({ target }: any) {
-		const element = document.querySelector(target.getAttribute('href'));
-		element.scrollIntoView({
-			behavior: 'smooth'
-		});
-	}
 </script>
 
-<nav>
-	<ul class="navbar">
-		<a href="#hero" on:click|preventDefault={scrollIntoView}>Home</a>
-		<a href="#about-me" style="margin-left: 30px" on:click|preventDefault={scrollIntoView}
-			>O mnie!</a
-		>
-		<a href="#experience" style="margin-left: 30px" on:click|preventDefault={scrollIntoView}
-			>Doświadczenie</a
-		>
-		<a href="#contact" on:click|preventDefault={scrollIntoView}>Kontakt</a>
-	</ul>
-</nav>
 <section class="container" id="hero">
 	<div class="hero">
 		<div class="hero__top">Joanna Kominiak</div>
@@ -49,8 +30,9 @@
 </section>
 <section style="background-color: #466060;">
 	<div class="container" style="height: 702px;">
-		<div class="">
-			<div class="about__top" style="color: white;">Certyfikaty</div>
+		<div class="cert">
+			<div class="cert__top">Certyfikaty</div>
+			<div class="cert__bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste nobis architecto exercitationem officiis beatae possimus nostrum fugiat culpa consequuntur consequatur, sapiente deleniti expedita. Unde fugiat consequuntur eos optio reiciendis.</div>
 		</div>
 	</div>
 </section>
@@ -60,29 +42,6 @@
 
 <style lang="scss">
 	@import '../lib/styling/style.scss';
-	nav {
-		position: fixed;
-		top: 35vh;
-
-		.navbar {
-			display: flex;
-			align-items: flex-start;
-			flex-direction: column;
-			gap: 60px;
-
-			a {
-				color: black;
-				font-weight: 400;
-				text-decoration: none;
-				cursor: default;
-
-				&:hover {
-					transform: scale(1.5);
-					transition: transform 30ms ease-in-out;
-				}
-			}
-		}
-	}
 	.hero {
 		display: flex;
 		flex-direction: column;
@@ -139,6 +98,23 @@
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
 			margin: 0 90px 135px 90px;
+		}
+	}
+	.cert {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		color: white;
+		gap: 20px;
+		&__top {
+			@include h2;
+		}
+		&__bottom {
+			font-family: DMSans-Regular, sans-serif;
+			margin: 15px auto 90px auto;
 		}
 	}
 	.container {

@@ -135,17 +135,16 @@
 	}
 	.experience {
 		display: flex;
-		flex: 0 1 20em;
 		height: 100%;
+		width: 100%;
 		gap: 20px;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
 		> div {
 			background-color: #0e0f19;
-			flex: 0 1 20em;
 			color: white;
 			border-radius: 54px;
-			padding: 30px;
+			flex: 1 1 0px;
 		}
 		&__head {
 			display: flex;

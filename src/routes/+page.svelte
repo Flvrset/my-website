@@ -3,7 +3,7 @@
 	import '../static/fonts/fonts.css';
 </script>
 
-<section class="container" id="hero">
+<section class="container">
 	<div class="hero">
 		<div class="hero__top">Joanna Kominiak</div>
 		<div class="hero__bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
@@ -14,7 +14,7 @@
 		<div class="hero__image" />
 	</div>
 </section>
-<section class="container" id="about-me">
+<section class="container">
 	<div class="about">
 		<div class="about__top">
 			Pracować mądrzej,<br /> uwalniać od absurdu.
@@ -32,12 +32,28 @@
 	<div class="container" style="height: 702px;">
 		<div class="cert">
 			<div class="cert__top">Certyfikaty</div>
-			<div class="cert__bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste nobis architecto exercitationem officiis beatae possimus nostrum fugiat culpa consequuntur consequatur, sapiente deleniti expedita. Unde fugiat consequuntur eos optio reiciendis.</div>
+			<div class="cert__bottom">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste nobis architecto
+				exercitationem officiis beatae possimus nostrum fugiat culpa consequuntur consequatur,
+				sapiente deleniti expedita. Unde fugiat consequuntur eos optio reiciendis.
+			</div>
 		</div>
 	</div>
 </section>
-<section class="container" id="experience">Doświadczenie</section>
-<section class="container" id="contact">kontakt</section>
+<section class="container">
+	<div class="experience">
+		<div class="test">
+			<div class="experience__head">
+				<div class="experience__head--number">1200</div>
+				<div class="experience__head--bottom">lorem ipsum</div>
+			</div>
+			a
+		</div>
+		<div>b</div>
+		<div>c</div>
+	</div>
+</section>
+<section class="container">kontakt</section>
 <Obiekt />
 
 <style lang="scss">
@@ -115,6 +131,34 @@
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
 			margin: 15px auto 90px auto;
+		}
+	}
+	.experience {
+		display: flex;
+		flex: 0 1 20em;
+		height: 100%;
+		gap: 20px;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		> div {
+			background-color: #0e0f19;
+			flex: 0 1 20em;
+			color: white;
+			border-radius: 54px;
+			padding: 30px;
+		}
+		&__head {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&--number {
+				font-size: 40px;
+				font-family: ClashDisplay-Semibold, sans-serif;
+			}
+			&--bottom {
+				font-family: ClashDisplay-Medium, sans-serif;
+				font-size: 20px;
+			}
 		}
 	}
 	.container {

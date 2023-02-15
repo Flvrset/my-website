@@ -42,15 +42,33 @@
 </section>
 <section class="container">
 	<div class="experience">
-		<div class="test">
+		<div>
 			<div class="experience__head">
 				<div class="experience__head--number">1200</div>
-				<div class="experience__head--bottom">lorem ipsum</div>
+				<div class="experience__head--bottom">Wyszkolonych pracowników</div>
 			</div>
-			a
+			<div class="experience__content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse recusandae, dolor vero ad. Possimus, maxime!
+			</div>
 		</div>
-		<div>b</div>
-		<div>c</div>
+		<div>
+			<div class="experience__head">
+				<div class="experience__head--number">140</div>
+				<div class="experience__head--bottom">Przeprowadzonych szkoleń</div>
+			</div>
+			<div class="experience__content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse recusandae, dolor vero ad. Possimus, maxime!
+			</div>
+		</div>
+		<div>
+			<div class="experience__head">
+				<div class="experience__head--number">9</div>
+				<div class="experience__head--bottom">lat doświadczenia</div>
+			</div>
+			<div class="experience__content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse recusandae, dolor vero ad. Possimus, maxime!
+			</div>
+		</div>
 	</div>
 </section>
 <section class="container">kontakt</section>
@@ -102,13 +120,13 @@
 		width: 100%;
 		background: #0e0f19;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
-		border-radius: 234px;
+		border-radius: 25vmin;
 		color: white;
 		gap: 50px;
 
 		&__top {
 			@include h2;
-			margin-left: 90px;
+			margin: 40px 0 0 90px;
 		}
 
 		&__bottom {
@@ -117,6 +135,7 @@
 		}
 	}
 	.cert {
+		margin-left: 50px;
 		height: 100%;
 		width: 100%;
 		display: flex;
@@ -140,24 +159,35 @@
 		gap: 20px;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
+		margin-top: 90px;
 		> div {
+			height: 617px;
 			background-color: #0e0f19;
 			color: white;
-			border-radius: 54px;
+			border-radius: 10vmin;
 			flex: 1 1 0px;
+			padding: 0 50px 0 50px;
+			box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 		}
 		&__head {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			&--number {
+				margin-top: 63px;
 				font-size: 40px;
 				font-family: ClashDisplay-Semibold, sans-serif;
 			}
 			&--bottom {
-				font-family: ClashDisplay-Medium, sans-serif;
-				font-size: 20px;
+				font-family: ClashDisplay-Light, sans-serif;
+				font-size: 17px;
 			}
+		}
+		&__content {
+			text-align: justify;
+			text-justify: auto;
+			margin: 40px auto;
+			font-family: DMSans-Regular, sans-serif;
 		}
 	}
 	.container {

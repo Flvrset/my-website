@@ -17,14 +17,17 @@
 <section class="container">
 	<div class="about">
 		<div class="about__top">
-			Pracować mądrzej,<br /> uwalniać od absurdu.
+			Pracować mądrzej,<br /> uwalniać od absurdu...
+		</div>
+		<div class="about__top--addon">
+			dostrzegać sens i robić coś po coś, dlaczegoś. Zatrzymywać się, oddalać perspektywę i budzić
+			świadomość. Zarażać pasją. To cała ja.
 		</div>
 		<div class="about__bottom">
-			Jestem Trenerem wewnętrznym. Samodzielnie stworzyłam autorską koncepcję rozwoju Pracowników
-			back office w organizacji. Skonstruowałam i prowadzę własne szkolenia wewnętrzne z
-			umiejętności miękkich w różnych obszarach, w tym cykl warsztatów dla Liderów. Moderując
-			spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z impasu. Koordynuję kursy
-			zewnętrzne.
+			Jestem Trenerem z dziesięcioletnim doświadczeniem w biznesie. Tworzyłam autorską koncepcję
+			rozwoju Pracowników w organizacji. Specjalizuję się w konstruowaniu i prowadzeniu szkoleń i
+			warsztatów z umiejętności miękkich w różnych obszarach i na różnych poziomach zaawansowania.
+			Moderując spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z impasu.
 		</div>
 	</div>
 </section>
@@ -48,7 +51,9 @@
 				<div class="experience__head--bottom">Wyszkolonych pracowników</div>
 			</div>
 			<div class="experience__content">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse recusandae, dolor vero ad. Possimus, maxime!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima
+				beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse
+				recusandae, dolor vero ad. Possimus, maxime!
 			</div>
 		</div>
 		<div>
@@ -57,7 +62,9 @@
 				<div class="experience__head--bottom">Przeprowadzonych szkoleń</div>
 			</div>
 			<div class="experience__content">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse recusandae, dolor vero ad. Possimus, maxime!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima
+				beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse
+				recusandae, dolor vero ad. Possimus, maxime!
 			</div>
 		</div>
 		<div>
@@ -66,7 +73,9 @@
 				<div class="experience__head--bottom">lat doświadczenia</div>
 			</div>
 			<div class="experience__content">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse recusandae, dolor vero ad. Possimus, maxime!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima
+				beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse
+				recusandae, dolor vero ad. Possimus, maxime!
 			</div>
 		</div>
 	</div>
@@ -116,21 +125,29 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-		height: 658px;
+		min-height: 658px;
+		height: auto;
 		width: 100%;
 		background: #0e0f19;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 		border-radius: 25vmin;
 		color: white;
-		gap: 50px;
+		gap: 0;
 
 		&__top {
 			@include h2;
 			margin: 40px 0 0 90px;
+
+			&--addon {
+				font-family: ClashDisplay-Light, sans-serif;
+				margin: 10px 90px 50px 90px;
+				font-size: 16px;
+			}
 		}
 
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
+			font-size: 24px;
 			margin: 0 90px 135px 90px;
 		}
 	}

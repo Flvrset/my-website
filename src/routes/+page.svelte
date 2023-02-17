@@ -31,7 +31,7 @@
 		</div>
 	</div>
 </section>
-<section style="background-color: #466060;">
+<section style="background-color: #466060; width: 100vw; overflow-x: hidden;">
 	<div class="container" style="height: 702px;">
 		<div class="cert">
 			<div class="cert__top">Certyfikaty</div>
@@ -136,7 +136,7 @@
 
 		&__top {
 			@include h2;
-			margin: 40px 0 0 90px;
+			margin: 90px 0 0 90px;
 
 			&--addon {
 				font-family: ClashDisplay-Light, sans-serif;

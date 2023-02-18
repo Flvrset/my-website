@@ -5,7 +5,7 @@
     height: 100%;
 }
 
-:global(h1, h2, h3) {
+:global(h1, h2) {
     font-weight: 100;
 }
 
@@ -22,7 +22,14 @@
     line-height: 81%;
 }
 
+@mixin h2-semibold {
+    font-family: ClashDisplay-Semibold, sans-serif;
+    font-size: 64px;
+    line-height: 81%;
+}
+
 @mixin button {
+    display: flex;
     font-family: ClashDisplay-Medium, sans-serif;
     color: white;
     width: 253px;
@@ -32,4 +39,18 @@
     align-items: center;
     text-decoration: none;
     cursor: pointer;
+}
+
+@mixin button-big {
+    display: flex;
+    font-family: ClashDisplay-Semibold, sans-serif;
+    min-width: 519px;
+    height: 142px;
+    font-size: 24px;
+    border-radius: 113px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 5px 5px 13px rgba(221, 229, 230, 0.9);
 }

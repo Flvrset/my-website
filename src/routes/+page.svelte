@@ -6,7 +6,7 @@
 <section class="container">
 	<div class="hero">
 		<h1>Joanna Kominiak</h1>
-		<div class="hero__bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+		<div class="hero__bottom">Szkolenia zrobione z sercem i duszą</div>
 		<div class="hero__buttons">
 			<a class="hero__buttons--contact" href="/contact">SKONTAKTUJ SIĘ ZE MNĄ</a>
 			<a class="hero__buttons--offers" href="/offers">ZOBACZ MOJĄ OFERTĘ</a>
@@ -32,20 +32,20 @@
 	</div>
 </section>
 <section class="colored--wide" style="background-color: #466060;">
-	<div class="container" style="height: 702px;">
+	<div class="container" style="min-height: 702px;">
 		<div class="support">
 			<h2>Kogo i jak wspieram?</h2>
 			<div>
 				<h3>Liderzy i Menedżerowie</h3>
-				<a href="/offers">szkolenia i warsztaty</a>
+				<a href="/offers#offer_1">szkolenia i warsztaty</a>
 			</div>
 			<div>
 				<h3>Zespoły i Pracownicy</h3>
-				<a href="/offers">moderacja i facylitacja</a>
+				<a href="/offers#offer_2">moderacja i facylitacja</a>
 			</div>
 			<div>
 				<h3>Trenerzy</h3>
-				<a href="/offers">szlifowanie kunsztu</a>
+				<a href="/offers#offer_3">szlifowanie kunsztu</a>
 			</div>
 		</div>
 	</div>
@@ -93,17 +93,44 @@
 	</div>
 </section>
 <section class="colored--wide" style="background-color: #F8C7CC;">
-	<div class="container" style="height: 561px;">
-		<svg width='29' height='21' viewBox='0 0 29 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12.9124 3.63953C9.67938 4.04651 7.13918 5.73256 7.13918 8.05814C7.13918 11.314 12.7392 10.3837 12.7392 15.2674C12.7392 18.0581 10.3144 20.5581 7.13918 20.5581C2.92474 20.5 0.5 17.3023 0.5 13.0581C0.5 7.4186 4.77217 1.13953 12.9124 0.5V3.63953ZM28.5 3.63953C25.267 4.04651 22.7268 5.73256 22.7268 8.05814C22.7268 11.314 28.3845 10.3837 28.3845 15.2674C28.3845 18.0581 25.9021 20.5581 22.7268 20.5581C18.5701 20.5581 16.1454 17.3605 16.1454 13.1163C16.1454 7.47674 20.4175 1.19767 28.4423 0.55814V3.63953H28.5Z' fill='black'/></svg>
+	<div class="container" style="min-height: 561px;">
+		<div class="quotes">
+			<svg width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+				><path
+					d="M12.9124 3.63953C9.67938 4.04651 7.13918 5.73256 7.13918 8.05814C7.13918 11.314 12.7392 10.3837 12.7392 15.2674C12.7392 18.0581 10.3144 20.5581 7.13918 20.5581C2.92474 20.5 0.5 17.3023 0.5 13.0581C0.5 7.4186 4.77217 1.13953 12.9124 0.5V3.63953ZM28.5 3.63953C25.267 4.04651 22.7268 5.73256 22.7268 8.05814C22.7268 11.314 28.3845 10.3837 28.3845 15.2674C28.3845 18.0581 25.9021 20.5581 22.7268 20.5581C18.5701 20.5581 16.1454 17.3605 16.1454 13.1163C16.1454 7.47674 20.4175 1.19767 28.4423 0.55814V3.63953H28.5Z"
+					fill="black"
+				/></svg
+			>
+			<div class="quotes__content">
+				<div>
+					“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore”
+				</div>
+				<div>
+					“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore”
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
-<section class="container">kontakt</section>
+<section class="container">
+	<div class="contact">
+		<h2>Chcesz ze mną współpracować?</h2>
+		<span>Jestem gotowa na wyzwania i chętnie podzielę się swoim doświadczeniem.</span>
+		<a href="/contact" class="button-big">SKONTAKTUJ SIĘ ZE MNĄ</a>
+	</div>
+</section>
 <Obiekt />
 
 <style lang="scss">
 	@import '../lib/styling/style.scss';
 	.colored--wide {
-		width: 100vw; 
+		width: 100vw;
 		overflow-x: hidden;
 	}
 	.hero {
@@ -185,7 +212,7 @@
 		color: white;
 		gap: 20px;
 		> h2 {
-			@include h2;
+			@include h2-semibold;
 			margin: 0;
 		}
 		h3 {
@@ -242,15 +269,49 @@
 	}
 
 	.quotes {
-		margin-left: 50px;
 		height: 100%;
 		width: 100%;
+		position: relative;
+		svg {
+			position: absolute;
+			bottom: 310px;
+			left: 50px;
+		}
+
+		&__content {
+			display: flex;
+			gap: 100px;
+			justify-content: center;
+
+			> div {
+				font-family: DMSans-Italic;
+				width: 342px;
+				font-size: 20px;
+				line-height: 117.2%;
+			}
+		}
+	}
+	.contact {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: flex-start;
-		color: white;
-		gap: 20px;
+		align-items: center;
+		
+		> h2 {
+			@include h2-semibold;
+		}
+		
+		> span {
+			font-family: DMSans-Regular;
+			font-size: 30px;
+			margin-bottom: 50px;
+		}
+
+		> a {
+			@include button-big;
+			background-color: #0E0F19;
+			letter-spacing: 0.055em;
+		}
 	}
 	.container {
 		display: flex;
@@ -264,5 +325,4 @@
 		min-height: 100vh;
 		max-width: calc(100% - 20px);
 	}
-
 </style>

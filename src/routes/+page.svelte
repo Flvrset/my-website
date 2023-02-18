@@ -5,7 +5,7 @@
 
 <section class="container">
 	<div class="hero">
-		<div class="hero__top">Joanna Kominiak</div>
+		<h1>Joanna Kominiak</h1>
 		<div class="hero__bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
 		<div class="hero__buttons">
 			<a class="hero__buttons--contact" href="/contact">SKONTAKTUJ SIĘ ZE MNĄ</a>
@@ -16,12 +16,12 @@
 </section>
 <section class="container">
 	<div class="about">
-		<div class="about__top">
+		<h2 class="about__top">
 			Pracować mądrzej,<br /> uwalniać od absurdu...
-		</div>
+		</h2>
 		<div class="about__top--addon">
 			dostrzegać sens i robić coś po coś, dlaczegoś. Zatrzymywać się, oddalać perspektywę i budzić
-			świadomość. Zarażać pasją. To cała ja.
+			świadomość.<br /> Zarażać pasją. To cała ja.
 		</div>
 		<div class="about__bottom">
 			Jestem Trenerem z dziesięcioletnim doświadczeniem w biznesie. Tworzyłam autorską koncepcję
@@ -33,12 +33,19 @@
 </section>
 <section style="background-color: #466060; width: 100vw; overflow-x: hidden;">
 	<div class="container" style="height: 702px;">
-		<div class="cert">
-			<div class="cert__top">Certyfikaty</div>
-			<div class="cert__bottom">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste nobis architecto
-				exercitationem officiis beatae possimus nostrum fugiat culpa consequuntur consequatur,
-				sapiente deleniti expedita. Unde fugiat consequuntur eos optio reiciendis.
+		<div class="support">
+			<h2>Kogo i jak wspieram?</h2>
+			<div>
+				<h3>Liderzy i Menedżerowie</h3>
+				<a href="/offers">szkolenia i warsztaty</a>
+			</div>
+			<div>
+				<h3>Zespoły i Pracownicy</h3>
+				<a href="/offers">moderacja i facylitacja</a>
+			</div>
+			<div>
+				<h3>Trenerzy</h3>
+				<a href="/offers">szlifowanie kunsztu</a>
 			</div>
 		</div>
 	</div>
@@ -47,24 +54,27 @@
 	<div class="experience">
 		<div>
 			<div class="experience__head">
-				<div class="experience__head--number">1200</div>
-				<div class="experience__head--bottom">Wyszkolonych pracowników</div>
+				<div class="experience__head--number">400</div>
+				<div class="experience__head--bottom">uczestników szkoleń rocznie</div>
 			</div>
 			<div class="experience__content">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima
-				beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse
-				recusandae, dolor vero ad. Possimus, maxime!
+				Na sali szkoleniowej online i stacjonarnie goszczę różnych uczestników. Chętnie pracuję ze
+				sprzedawcami, pracownikami back office i całymi zespołami. Wspieram przełożonych. Dzielę się
+				wiedzą z trenerami, moderatorami i facylitatorami. Doceniam multidyscyplinarne grupy
+				warsztatowe, dążę na sali do efektu synergii, czerpania od siebie i wspierania się nawzajem.
 			</div>
 		</div>
 		<div>
 			<div class="experience__head">
-				<div class="experience__head--number">140</div>
-				<div class="experience__head--bottom">Przeprowadzonych szkoleń</div>
+				<div class="experience__head--number">300</div>
+				<div class="experience__head--bottom">godzin warsztatów rocznie</div>
 			</div>
 			<div class="experience__content">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima
-				beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse
-				recusandae, dolor vero ad. Possimus, maxime!
+				Fundamentem moich warsztatów jest cykl uczenia się osób dorosłych. Dlatego doświadczanie,
+				refleksja jest kluczowa dla ugruntowania teorii i pragmatyki. Dbam o interakcję, aktywność i
+				współudział. Głęboko wierzę w kontrakt uczestników i zadbanie o komfortową przestrzeń do
+				pracy. Sala szkoleniowa jest idealną przestrzenią do swobodnego popełniania błędów, po to,
+				by unikać ich w realnych sytuacjach.
 			</div>
 		</div>
 		<div>
@@ -73,9 +83,11 @@
 				<div class="experience__head--bottom">lat doświadczenia</div>
 			</div>
 			<div class="experience__content">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ea dignissimos. Minima
-				beatae doloremque magni id dolorem cumque itaque illum eveniet sequi placeat esse
-				recusandae, dolor vero ad. Possimus, maxime!
+				Ważne, by być wiarygodną. Sądzę, że Trener powinien zarażać pasją, wierzyć w to, co
+				przekazuje. Zachowuję neutralność. To uczestnicy spotkania są w centrum, Trener prowadzi
+				grupę, wskazuje drogę, przeprowadza przez proces. Uruchamiam wrażliwość. Obserwacja grupy,
+				ciekawość, diagnoza jej stanu w każdej części spotkania jest kluczem do stosowania
+				odpowiednich narzędzi, nadawania właściwego tempa, podążania za uczestnikami.
 			</div>
 		</div>
 	</div>
@@ -88,8 +100,9 @@
 	.hero {
 		display: flex;
 		flex-direction: column;
-		&__top {
-			@include h1();
+		h1 {
+			@include h1;
+			margin: 0;
 		}
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
@@ -132,10 +145,10 @@
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 		border-radius: 25vmin;
 		color: white;
-		gap: 0;
 
 		&__top {
 			@include h2;
+			font-weight: 100;
 			margin: 90px 0 0 90px;
 
 			&--addon {
@@ -151,7 +164,7 @@
 			margin: 0 90px 135px 90px;
 		}
 	}
-	.cert {
+	.support {
 		margin-left: 50px;
 		height: 100%;
 		width: 100%;
@@ -161,17 +174,29 @@
 		align-items: flex-start;
 		color: white;
 		gap: 20px;
-		&__top {
+		> h2 {
 			@include h2;
+			margin: 0;
 		}
-		&__bottom {
-			font-family: DMSans-Regular, sans-serif;
-			margin: 15px auto 90px auto;
+		h3 {
+			font-family: ClashDisplay-Light, sans-serif;
+			font-size: 24px;
+			margin-bottom: 0;
+		}
+		a {
+			font-family: ClashDisplay-Bold;
+			font-size: 64px;
+			color: #486969;
+			text-decoration: none;
+			&:hover {
+				color: whitesmoke;
+				transition: 300ms ease;
+			}
 		}
 	}
 	.experience {
 		display: flex;
-		height: 100%;
+		height: 70vh;
 		width: 100%;
 		gap: 20px;
 		justify-content: space-evenly;
@@ -201,8 +226,6 @@
 			}
 		}
 		&__content {
-			text-align: justify;
-			text-justify: auto;
 			margin: 40px auto;
 			font-family: DMSans-Regular, sans-serif;
 		}

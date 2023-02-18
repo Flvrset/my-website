@@ -31,7 +31,7 @@
 		</div>
 	</div>
 </section>
-<section style="background-color: #466060; width: 100vw; overflow-x: hidden;">
+<section class="colored--wide" style="background-color: #466060;">
 	<div class="container" style="height: 702px;">
 		<div class="support">
 			<h2>Kogo i jak wspieram?</h2>
@@ -92,11 +92,20 @@
 		</div>
 	</div>
 </section>
+<section class="colored--wide" style="background-color: #F8C7CC;">
+	<div class="container" style="height: 561px;">
+		<svg width='29' height='21' viewBox='0 0 29 21' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12.9124 3.63953C9.67938 4.04651 7.13918 5.73256 7.13918 8.05814C7.13918 11.314 12.7392 10.3837 12.7392 15.2674C12.7392 18.0581 10.3144 20.5581 7.13918 20.5581C2.92474 20.5 0.5 17.3023 0.5 13.0581C0.5 7.4186 4.77217 1.13953 12.9124 0.5V3.63953ZM28.5 3.63953C25.267 4.04651 22.7268 5.73256 22.7268 8.05814C22.7268 11.314 28.3845 10.3837 28.3845 15.2674C28.3845 18.0581 25.9021 20.5581 22.7268 20.5581C18.5701 20.5581 16.1454 17.3605 16.1454 13.1163C16.1454 7.47674 20.4175 1.19767 28.4423 0.55814V3.63953H28.5Z' fill='black'/></svg>
+	</div>
+</section>
 <section class="container">kontakt</section>
 <Obiekt />
 
 <style lang="scss">
 	@import '../lib/styling/style.scss';
+	.colored--wide {
+		width: 100vw; 
+		overflow-x: hidden;
+	}
 	.hero {
 		display: flex;
 		flex-direction: column;
@@ -145,6 +154,7 @@
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 		border-radius: 25vmin;
 		color: white;
+		margin: 50px auto;
 
 		&__top {
 			@include h2;
@@ -189,24 +199,24 @@
 			color: #486969;
 			text-decoration: none;
 			&:hover {
-				color: whitesmoke;
+				color: #668787;
 				transition: 300ms ease;
 			}
 		}
 	}
 	.experience {
 		display: flex;
-		height: 70vh;
 		width: 100%;
 		gap: 20px;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
-		margin-top: 90px;
+		margin: 30px auto;
 		> div {
 			height: 617px;
 			background-color: #0e0f19;
 			color: white;
 			border-radius: 10vmin;
+			min-width: 200px;
 			flex: 1 1 0px;
 			padding: 0 50px 0 50px;
 			box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
@@ -230,6 +240,18 @@
 			font-family: DMSans-Regular, sans-serif;
 		}
 	}
+
+	.quotes {
+		margin-left: 50px;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		color: white;
+		gap: 20px;
+	}
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -239,7 +261,8 @@
 		width: 1064px;
 		margin-left: auto;
 		margin-right: auto;
-		height: 100vh;
+		min-height: 100vh;
 		max-width: calc(100% - 20px);
 	}
+
 </style>

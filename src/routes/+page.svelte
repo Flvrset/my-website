@@ -294,11 +294,11 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		
+
 		> h2 {
 			@include h2-semibold;
 		}
-		
+
 		> span {
 			font-family: DMSans-Regular;
 			font-size: 30px;
@@ -307,7 +307,7 @@
 
 		> a {
 			@include button-big;
-			background-color: #0E0F19;
+			background-color: #0e0f19;
 			letter-spacing: 0.055em;
 		}
 	}

@@ -1,8 +1,8 @@
 <div class="header">
-	<h1>Zaglądnij <br/> do mojego menu.</h1>
+	<h1>Zaglądnij <br /> do mojego menu.</h1>
 </div>
 <section class="container">
-	<div class="offer" id="offer_1">
+	<div class="offer" style="background-color: #F8C7CC;" id="offer_1">
 		<h2>Pakiet szkoleń dla Liderów i Menedżerów</h2>
 		<span>W tych warsztatach pracujemy nad:</span>
 		<ul>
@@ -24,7 +24,30 @@
 	</div>
 </section>
 <section class="container">
-	<div class="offer" id="offer_2">offer_2</div>
+	<div
+		class="offer"
+		style="background-color: #466060; align-content:flex-end; color:white;"
+		id="offer_2"
+	>
+		<h2>Wzmacnianie efektywności</h2>
+		<span>W tych warsztatach skupiamy się na:</span>
+		<ul>
+			<li>praca pod presją czasu</li>
+			<li>automotywacja</li>
+			<li>komunikacja z informacją zwrotną</li>
+			<li>funkcjonowanie w zespole</li>
+			<li>kontakt poprzez korespondencję</li>
+			<li>praca z nawykiem</li>
+			<li>współpraca i czerpanie z różnorodności</li>
+			<li>budzenie pasji</li>
+			<li>troska o klienta w design thinking</li>
+		</ul>
+	</div>
+</section>
+<section class="colored--wide" style="background-color: #D9D9D9;">
+	<div class="container" style="min-height: 523px">
+		<a href="/contact" class="button"> SKONTAKTUJ SIĘ ZE MNĄ </a>
+	</div>
 </section>
 <section class="container">
 	<div class="offer" id="offer_3">offer_3</div>
@@ -54,15 +77,38 @@
 		width: 1064px;
 		margin-left: auto;
 		margin-right: auto;
-		min-height: 100vh;
+		min-height: 80vh;
 		max-width: calc(100% - 20px);
+	}
+
+	.colored--wide {
+		width: 100vw;
+		overflow-x: hidden;
+	}
+
+	.button {
+		@include button-big;
+		color: #d9d9d9;
+		letter-spacing: 0.055em;
+		text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(87, 87, 87, 0.5);
+		box-shadow: -11px 11px 22px rgba(184, 184, 184, 0.2), 11px -11px 22px rgba(184, 184, 184, 0.2),
+			-11px -11px 22px rgba(250, 250, 250, 0.9), 11px 11px 28px rgba(184, 184, 184, 0.9),
+			inset 1px 1px 2px rgba(250, 250, 250, 0.3), inset -1px -1px 2px rgba(184, 184, 184, 0.5);
+		background: linear-gradient(135deg, #e4e4e4 0%, #cecece 100%);
+		&:hover {
+			box-shadow: 1px 1px 2px rgba(247, 247, 247, 0.3), -1px -1px 2px rgba(187, 187, 187, 0.5),
+				inset -13px 13px 26px rgba(187, 187, 187, 0.2),
+				inset 13px -13px 26px rgba(187, 187, 187, 0.2),
+				inset -13px -13px 26px rgba(247, 247, 247, 0.9),
+				inset 13px 13px 33px rgba(187, 187, 187, 0.9);
+			transition: 300ms ease;
+		}
 	}
 
 	.offer {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		background-color: pink;
 		width: 100%;
 		min-height: 503px;
 		border-radius: 25vmin;
@@ -70,20 +116,25 @@
 
 		> h2 {
 			@include h2;
-			margin: 90px 40px 0 90px;
+			margin: 90px 40px 40px 90px;
 		}
-		
-		span, ul {
+
+		span,
+		ul {
 			font-family: DMSans-Regular, sans-serif;
+			margin: 0 30px;
 		}
 
 		> ul {
 			display: flex;
 			flex-direction: column;
 			list-style-type: none;
-			> li:hover {
-				color: grey;
+			gap: 2px;
+			> li {
+				&:hover {
+					color: grey;
+				}
 			}
-		} 
+		}
 	}
 </style>

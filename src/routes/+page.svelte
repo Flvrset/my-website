@@ -175,7 +175,6 @@
 		justify-content: center;
 		align-items: flex-start;
 		min-height: 658px;
-		height: auto;
 		width: 100%;
 		background: #0e0f19;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
@@ -185,8 +184,7 @@
 
 		&__top {
 			@include h2;
-			font-weight: 100;
-			margin: 90px 0 0 90px;
+			margin: 90px 30px 0 90px;
 
 			&--addon {
 				font-family: ClashDisplay-Light, sans-serif;

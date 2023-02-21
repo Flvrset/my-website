@@ -1,8 +1,41 @@
+<script lang="ts">
+	import '../../static/fonts/fonts.css';
+	let scroll: number;
+	let speed = 0.2;
+</script>
+
+<svelte:window bind:scrollY={scroll} />
+
 <div class="header">
 	<h1>Zaglądnij <br /> do mojego menu.</h1>
 </div>
 <section class="container">
-	<div class="offer" style="background-color: #F8C7CC;" id="offer_1">
+	<div class="offer-with-image">
+		<img src="../../src/static/images/offer1.png" 
+		style:transform={`translateY(${scroll * -1 * speed}px)`} alt="offer_1" />
+		<div class="offer offer--first" style="background-color: #EB5E28; color: white;" id="offer_1">
+			<h2>Wzmacnianie Efektywności</h2>
+			<span>W tych warsztatach skupiam się na:</span>
+			<ul>
+				<li>praca pod presją czasu</li>
+				<li>automotywacja</li>
+				<li>komunikacja z informacją zwrotną</li>
+				<li>funkcjonowanie w zespole</li>
+				<li>kontakt poprzez korespondencję</li>
+				<li>praca z nawykiem</li>
+				<li>współpraca i czerpanie z różnorodności</li>
+				<li>budzenie pasji</li>
+				<li>troska o klienta w design thinking</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="container">
+	<div
+		class="offer"
+		style="background-color: #466060; align-content:flex-end; color:white;"
+		id="offer_2"
+	>
 		<h2>Pakiet szkoleń dla Liderów i Menedżerów</h2>
 		<span>W tych warsztatach pracujemy nad:</span>
 		<ul>
@@ -20,27 +53,6 @@
 			<li>organizacja pracy</li>
 			<li>budowanie zaufanie</li>
 			<li>delegowanie</li>
-		</ul>
-	</div>
-</section>
-<section class="container">
-	<div
-		class="offer"
-		style="background-color: #466060; align-content:flex-end; color:white;"
-		id="offer_2"
-	>
-		<h2>Wzmacnianie efektywności</h2>
-		<span>W tych warsztatach skupiamy się na:</span>
-		<ul>
-			<li>praca pod presją czasu</li>
-			<li>automotywacja</li>
-			<li>komunikacja z informacją zwrotną</li>
-			<li>funkcjonowanie w zespole</li>
-			<li>kontakt poprzez korespondencję</li>
-			<li>praca z nawykiem</li>
-			<li>współpraca i czerpanie z różnorodności</li>
-			<li>budzenie pasji</li>
-			<li>troska o klienta w design thinking</li>
 		</ul>
 	</div>
 </section>
@@ -63,9 +75,7 @@
 	@import '../../lib/styling/style.scss';
 
 	.header {
-		width: 1064px;
-		margin-left: auto;
-		margin-right: auto;
+		padding: 0 50px;
 		max-width: calc(100% - 20px);
 		h1 {
 			@include h1;
@@ -82,6 +92,19 @@
 		margin-right: auto;
 		min-height: 80vh;
 		max-width: calc(100% - 20px);
+	}
+
+	.offer-with-image {
+		display: flex;
+		position: absolute;
+		align-items: center;
+		> img {
+			border-radius: 172px;
+			position: relative;
+			left: 81px;
+			width: 540px;
+			height: 485px;
+		}
 	}
 
 	.colored--wide {
@@ -113,8 +136,8 @@
 					inset 13px -13px 26px rgba(187, 187, 187, 0.2),
 					inset -13px -13px 26px rgba(247, 247, 247, 0.9),
 					inset 13px 13px 33px rgba(187, 187, 187, 0.9);
-					color: rgba(69, 201, 65, 0.637);
-					text-shadow: none;
+				color: rgba(69, 201, 65, 0.637);
+				text-shadow: none;
 			}
 		}
 		h2 {
@@ -126,32 +149,30 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		width: 100%;
-		min-height: 503px;
-		border-radius: 25vmin;
+		border-radius: 20vmin;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 
-		> h2 {
-			@include h2;
-			margin: 90px 40px 40px 90px;
+		&--first {
+			min-height: 621px;
+			max-width: 608px;
+
+			h2,
+			span,
+			ul {
+				margin: 0 90px 0 100px;
+			}
+			> h2 {
+				@include h2;
+				margin-bottom: 15px;
+			}
+			> span {
+				margin-bottom: 30px;
+			}
 		}
 
 		span,
 		ul {
 			font-family: DMSans-Regular, sans-serif;
-			margin: 0 30px;
-		}
-
-		> ul {
-			display: flex;
-			flex-direction: column;
-			list-style-type: none;
-			gap: 2px;
-			> li {
-				&:hover {
-					color: grey;
-				}
-			}
 		}
 	}
 </style>

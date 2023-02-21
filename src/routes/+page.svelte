@@ -3,13 +3,13 @@
 	import '../static/fonts/fonts.css';
 </script>
 
-<section class="container">
+<section class="container" style="min-height:95vh;">
 	<div class="hero">
 		<h1>Joanna Kominiak</h1>
-		<div class="hero__bottom">Szkolenia zrobione z sercem i duszą</div>
+		<div class="hero__bottom">Trener Biznesu | Facylitator</div>
 		<div class="hero__buttons">
-			<a class="hero__buttons--contact" href="/contact">SKONTAKTUJ SIĘ ZE MNĄ</a>
-			<a class="hero__buttons--offers" href="/offers">ZOBACZ MOJĄ OFERTĘ</a>
+			<a class="hero__buttons--contact" href="/contact">Skontaktuj się ze mną</a>
+			<a class="hero__buttons--offers" href="/offers">kogo i jak wspieram</a>
 		</div>
 		<div class="hero__image" />
 	</div>
@@ -31,8 +31,8 @@
 		</div>
 	</div>
 </section>
-<section class="colored--wide" style="background-color: #466060;">
-	<div class="container" style="min-height: 702px;">
+<section class="colored--wide" style="background-color: #EB5E28;">
+	<div class="container" style="min-height: 702px; align-items:flex-start">
 		<div class="support">
 			<h2>Kogo i jak wspieram?</h2>
 			<div>
@@ -92,13 +92,13 @@
 		</div>
 	</div>
 </section>
-<section class="colored--wide" style="background-color: #F8C7CC;">
+<section class="colored--wide" style="background-color: #252422;">
 	<div class="container" style="min-height: 561px;">
 		<div class="quotes">
 			<svg width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg"
 				><path
 					d="M12.9124 3.63953C9.67938 4.04651 7.13918 5.73256 7.13918 8.05814C7.13918 11.314 12.7392 10.3837 12.7392 15.2674C12.7392 18.0581 10.3144 20.5581 7.13918 20.5581C2.92474 20.5 0.5 17.3023 0.5 13.0581C0.5 7.4186 4.77217 1.13953 12.9124 0.5V3.63953ZM28.5 3.63953C25.267 4.04651 22.7268 5.73256 22.7268 8.05814C22.7268 11.314 28.3845 10.3837 28.3845 15.2674C28.3845 18.0581 25.9021 20.5581 22.7268 20.5581C18.5701 20.5581 16.1454 17.3605 16.1454 13.1163C16.1454 7.47674 20.4175 1.19767 28.4423 0.55814V3.63953H28.5Z"
-					fill="black"
+					fill="#fffcf2"
 				/></svg
 			>
 			<div class="quotes__content">
@@ -151,18 +151,25 @@
 			display: flex;
 			gap: 16.55px;
 			margin-top: 23px;
+			text-transform: uppercase;
 			a {
 				@include button;
+				transition: 0.1s ease-in-out;
+
+				&:hover {
+					transform: scale(1.05);
+					transition: 0.1s ease-in-out;
+				}
 			}
 			&--contact {
 				display: flex;
-				background: #81a684;
+				background: #EB5E28;
 				letter-spacing: 0.065em;
 				font-size: 0.875em;
 			}
 			&--offers {
 				display: flex;
-				background: #466060;
+				background: #403D39;
 				letter-spacing: 0.07em;
 				font-size: 0.9375em;
 			}
@@ -176,7 +183,7 @@
 		align-items: flex-start;
 		min-height: 658px;
 		width: 100%;
-		background: #0e0f19;
+		background: #252422;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 		border-radius: 25vmin;
 		color: white;
@@ -184,11 +191,11 @@
 
 		&__top {
 			@include h2;
-			margin: 90px 30px 0 90px;
+			margin: 100px 30px 0 100px;
 
 			&--addon {
 				font-family: ClashDisplay-Light, sans-serif;
-				margin: 10px 90px 50px 90px;
+				margin: 10px 100px 50px 100px;
 				font-size: 16px;
 			}
 		}
@@ -196,13 +203,12 @@
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
 			font-size: 24px;
-			margin: 0 90px 135px 90px;
+			margin: 0 100px 135px 100px;
 		}
 	}
 	.support {
-		margin-left: 50px;
+		padding: 50px;
 		height: 100%;
-		width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -221,10 +227,11 @@
 		a {
 			font-family: ClashDisplay-Bold;
 			font-size: 64px;
-			color: #486969;
+			color: #E2551F;
 			text-decoration: none;
+			transition: 300ms ease;
 			&:hover {
-				color: #668787;
+				color: #FFB79B;
 				transition: 300ms ease;
 			}
 		}
@@ -238,13 +245,21 @@
 		margin: 30px auto;
 		> div {
 			height: 617px;
-			background-color: #0e0f19;
-			color: white;
+			background-color: #FFFCF2;
+			color: #252422;
 			border-radius: 10vmin;
 			min-width: 200px;
+			max-width: 300px;
 			flex: 1 1 0px;
 			padding: 0 50px 0 50px;
 			box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
+			transition: 0.2s ease-in-out;
+
+			&:hover {
+				background-color: #CCC5B9;
+				transition: 0.2s ease-in-out;
+				transform: scale(1.05);
+			}
 		}
 		&__head {
 			display: flex;
@@ -256,13 +271,13 @@
 				font-family: ClashDisplay-Semibold, sans-serif;
 			}
 			&--bottom {
-				font-family: ClashDisplay-Light, sans-serif;
+				font-family: ClashDisplay-Medium, sans-serif;
 				font-size: 17px;
 			}
 		}
 		&__content {
 			margin: 40px auto;
-			font-family: DMSans-Regular, sans-serif;
+			font-family: DMSans-Medium, sans-serif;
 		}
 	}
 
@@ -270,6 +285,7 @@
 		height: 100%;
 		width: 100%;
 		position: relative;
+		color: #fffcf2;
 		svg {
 			position: absolute;
 			bottom: 310px;
@@ -307,8 +323,14 @@
 
 		> a {
 			@include button-big;
-			background-color: #0e0f19;
+			background-color: #EB5E28;
 			letter-spacing: 0.055em;
+			transition: 0.2s ease-in-out;
+
+			&:hover {
+				transform: scale(1.05);
+				transition: 0.2s ease-in-out;
+			}
 		}
 	}
 	.container {

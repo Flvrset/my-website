@@ -46,7 +46,10 @@
 </section>
 <section class="colored--wide" style="background-color: #D9D9D9;">
 	<div class="container" style="min-height: 523px">
-		<a href="/contact" class="button"> SKONTAKTUJ SIĘ ZE MNĄ </a>
+		<div class="custom">
+			<h2>Szukasz innego szkolenia?</h2>
+			<a href="/contact" class="custom__button"> SKONTAKTUJ SIĘ ZE MNĄ </a>
+		</div>
 	</div>
 </section>
 <section class="container">
@@ -86,22 +89,36 @@
 		overflow-x: hidden;
 	}
 
-	.button {
-		@include button-big;
-		color: #d9d9d9;
-		letter-spacing: 0.055em;
-		text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(87, 87, 87, 0.5);
-		box-shadow: -11px 11px 22px rgba(184, 184, 184, 0.2), 11px -11px 22px rgba(184, 184, 184, 0.2),
-			-11px -11px 22px rgba(250, 250, 250, 0.9), 11px 11px 28px rgba(184, 184, 184, 0.9),
-			inset 1px 1px 2px rgba(250, 250, 250, 0.3), inset -1px -1px 2px rgba(184, 184, 184, 0.5);
-		background: linear-gradient(135deg, #e4e4e4 0%, #cecece 100%);
-		&:hover {
-			box-shadow: 1px 1px 2px rgba(247, 247, 247, 0.3), -1px -1px 2px rgba(187, 187, 187, 0.5),
-				inset -13px 13px 26px rgba(187, 187, 187, 0.2),
-				inset 13px -13px 26px rgba(187, 187, 187, 0.2),
-				inset -13px -13px 26px rgba(247, 247, 247, 0.9),
-				inset 13px 13px 33px rgba(187, 187, 187, 0.9);
-			transition: 300ms ease;
+	.custom {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 40px;
+		&__button {
+			@include button-big;
+			color: #d9d9d9;
+			letter-spacing: 0.055em;
+			text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(87, 87, 87, 0.5);
+			box-shadow: -11px 11px 22px rgba(184, 184, 184, 0.2), 11px -11px 22px rgba(184, 184, 184, 0.2),
+				-11px -11px 22px rgba(250, 250, 250, 0.9), 11px 11px 28px rgba(184, 184, 184, 0.9),
+				inset 1px 1px 2px rgba(250, 250, 250, 0.3), inset -1px -1px 2px rgba(184, 184, 184, 0.5);
+			background: linear-gradient(135deg, #e4e4e4 0%, #cecece 100%);
+			margin-top: 40px;
+			transition: 0.3s ease-in-out;
+			&:hover {
+				box-shadow: 1px 1px 2px rgba(247, 247, 247, 0.3), -1px -1px 2px rgba(187, 187, 187, 0.5),
+					inset -13px 13px 26px rgba(187, 187, 187, 0.2),
+					inset 13px -13px 26px rgba(187, 187, 187, 0.2),
+					inset -13px -13px 26px rgba(247, 247, 247, 0.9),
+					inset 13px 13px 33px rgba(187, 187, 187, 0.9);
+					color: rgba(69, 201, 65, 0.637);
+					text-shadow: none;
+			}
+		}
+		h2 {
+			@include h2;
 		}
 	}
 

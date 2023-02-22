@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Obiekt from '$lib/components/object.svelte';
 	import '../static/fonts/fonts.css';
 </script>
 
@@ -11,7 +10,6 @@
 			<a class="hero__buttons--contact" href="/contact">Skontaktuj się ze mną</a>
 			<a class="hero__buttons--offers" href="/offers">kogo i jak wspieram</a>
 		</div>
-		<div class="hero__image" />
 	</div>
 </section>
 <section class="container">
@@ -37,11 +35,11 @@
 			<h2>Kogo i jak wspieram?</h2>
 			<div>
 				<h3>Liderzy i Menedżerowie</h3>
-				<a href="/offers#offer_1">szkolenia i warsztaty</a>
+				<a href="/offers#offer_2">szkolenia i warsztaty</a>
 			</div>
 			<div>
 				<h3>Zespoły i Pracownicy</h3>
-				<a href="/offers#offer_2">moderacja i facylitacja</a>
+				<a href="/offers#offer_5">moderacja i facylitacja</a>
 			</div>
 			<div>
 				<h3>Trenerzy</h3>
@@ -125,7 +123,6 @@
 		<a href="/contact" class="button-big">SKONTAKTUJ SIĘ ZE MNĄ</a>
 	</div>
 </section>
-<Obiekt />
 
 <style lang="scss">
 	@import '../lib/styling/style.scss';

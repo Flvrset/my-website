@@ -277,7 +277,6 @@
 	.gradient {
 		position: absolute;
 		z-index: -1;
-		background: url("../../lib/images/mesh-gradient.png");
 		width: 1203px;
 		height: 950px;
 		border-radius: 105px;

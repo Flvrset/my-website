@@ -101,17 +101,15 @@
 			>
 			<div class="quotes__content">
 				<div>
-					“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore”
+					“Organizacyjnie wszystko dopięte na ostatni guzik. Asia ma wielki dar do przekazywania
+					wiedzy! Teraz tylko wdrażać w życie zdobyte informacje.”
 				</div>
 				<div>
-					“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore”
+					“Świetny warsztat, na którym poznałam nowe narzędzia, które mogę wykorzystywać przede
+					wszystkim w pracy, ale i w życiu codziennym. Żadna minuta szkolenia nie została
+					zmarnowana.”
 				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -160,13 +158,13 @@
 			}
 			&--contact {
 				display: flex;
-				background: #EB5E28;
+				background: #eb5e28;
 				letter-spacing: 0.065em;
 				font-size: 0.875em;
 			}
 			&--offers {
 				display: flex;
-				background: #403D39;
+				background: #403d39;
 				letter-spacing: 0.07em;
 				font-size: 0.9375em;
 			}
@@ -224,11 +222,11 @@
 		a {
 			font-family: ClashDisplay-Bold;
 			font-size: 64px;
-			color: #E2551F;
+			color: #e2551f;
 			text-decoration: none;
 			transition: 300ms ease;
 			&:hover {
-				color: #FFB79B;
+				color: #ffb79b;
 				transition: 300ms ease;
 			}
 		}
@@ -242,7 +240,7 @@
 		margin: 30px auto;
 		> div {
 			height: 617px;
-			background-color: #FFFCF2;
+			background-color: #fffcf2;
 			color: #252422;
 			border-radius: 10vmin;
 			min-width: 200px;
@@ -253,7 +251,7 @@
 			transition: 0.2s ease-in-out;
 
 			&:hover {
-				background-color: #CCC5B9;
+				background-color: #ccc5b9;
 				transition: 0.2s ease-in-out;
 				transform: scale(1.05);
 			}
@@ -290,11 +288,13 @@
 		}
 
 		&__content {
-			display: flex;
+			display: inline-block;
 			gap: 100px;
 			justify-content: center;
 
 			> div {
+				margin: 20px 90px;
+				display: inline-block;
 				font-family: DMSans-Italic;
 				width: 342px;
 				font-size: 20px;
@@ -320,7 +320,7 @@
 
 		> a {
 			@include button-big;
-			background-color: #EB5E28;
+			background-color: #eb5e28;
 			letter-spacing: 0.055em;
 			transition: 0.2s ease-in-out;
 

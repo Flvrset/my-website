@@ -109,7 +109,14 @@
 					wszystkim w pracy, ale i w życiu codziennym. Żadna minuta szkolenia nie została
 					zmarnowana.”
 				</div>
-				
+				<div>
+					“Warsztaty jak zawsze na wysokim poziomie - świetna jakość materiałów, prowadząca jak
+					zwykle przygotowana do perfekcji, dbająca o dobrą atmosferę. Super!”
+				</div>
+				<div>
+					“Super szkolenie prowadzone w przyjaznej atmosferze. Bardzo dobrze przygotowane materiały.
+					Wiedza i kompetencja na najwyższym poziomie.”
+				</div>
 			</div>
 		</div>
 	</div>
@@ -278,7 +285,7 @@
 
 	.quotes {
 		height: 100%;
-		width: 100%;
+		width: auto;
 		position: relative;
 		color: #fffcf2;
 		svg {

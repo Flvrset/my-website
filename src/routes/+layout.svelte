@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Lottie } from 'lottie-svelte';
 	import type { AnimationEvent } from 'lottie-svelte/iface';
-	import '../static/icons8-linkedin.json';
 	let anim: AnimationEvent;
 
 	function lottie_handler(event: AnimationEvent) {
@@ -24,7 +23,7 @@
 		>
 			<i style="width:24px;">
 				<Lottie
-					path="../../src/static/icons8-linkedin.json"
+					path="../../src/lib/icons8-linkedin.json"
 					autoplay={false}
 					on:animation={lottie_handler}
 				/>

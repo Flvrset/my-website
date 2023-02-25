@@ -1,5 +1,8 @@
 <script lang="ts">
 	import '../../static/fonts/fonts.css';
+	import offer1 from "../../lib/images/offer1.png"
+	import pencil from "../../lib/images/pencil-with-eraser.png"
+	import yoga from "../../lib/images/person-doing-yoga-outdoors 1.png"
 	let scroll: number;
 	let speed = 0.2;
 </script>
@@ -12,7 +15,7 @@
 <section class="container">
 	<div class="offer-with-image">
 		<img
-			src="../../src/static/images/offer1.png"
+			src={offer1}
 			style:transform={`translateY(${scroll * -1 * speed}px)`}
 			alt="offer_1"
 		/>
@@ -66,7 +69,7 @@
 		<div class="custom">
 			<h2>Szukasz<br />innego<br />szkolenia?</h2>
 			<a href="/contact"> SKONTAKTUJ SIĘ ZE MNĄ </a>
-			<img alt="yoga" src="../../../src/static/images/person-doing-yoga-outdoors 1.png" />
+			<img alt="yoga" src={yoga} />
 		</div>
 	</div>
 </section>
@@ -86,7 +89,7 @@
 		</ul>
 	</div>
 	<img
-		src="../../../src/static/images/pencil-with-eraser.png"
+		src={pencil}
 		style="position: relative; width: 503px; top: 151px; left: 285px;"
 		alt="pencil"
 	/>
@@ -274,7 +277,7 @@
 	.gradient {
 		position: absolute;
 		z-index: -1;
-		background: url('../../../src/static/images/mesh-gradient.png');
+		background: url("../../lib/images/mesh-gradient.png");
 		width: 1203px;
 		height: 950px;
 		border-radius: 105px;

@@ -97,7 +97,7 @@
 		<h2>Konstruowanie i podpinanie pracowników organizacji pod misję, wizję i wartości.</h2>
 	</div>
 </section>
-<div style:transform={`translateY(${scroll * -1 * speed + 150}px)`} class="gradient" />
+<div style:transform={`translateY(${scroll * -1 * speed + 100}px)`} class="gradient" />
 <section class="container">
 	<div class="offer offer__fifth" id="offer_4">
 		<h2>Gdy wiedza jest w zespole...</h2>
@@ -150,6 +150,7 @@
 		display: flex;
 		position: absolute;
 		align-items: center;
+		margin-bottom: 40px;
 		> img {
 			border-radius: 172px;
 			position: relative;
@@ -270,19 +271,27 @@
 		&--list {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: flex-start;
 			margin-bottom: 40px;
+			margin-left: 90px;
+			margin-right: 90px;
+			gap: 20px;
+			> ul {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 	}
 	.gradient {
 		position: absolute;
 		z-index: -1;
 		background: url('$lib/images/mesh-gradient.png');
-		width: 1203px;
-		height: 950px;
+		width: 1000px;
+		height: 500px;
 		border-radius: 105px;
 		text-align: center;
 		background-size: cover;
-		left: 0;
+		left: 100px;
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;

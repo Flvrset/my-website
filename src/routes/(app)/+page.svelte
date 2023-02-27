@@ -19,7 +19,7 @@
 		</h2>
 		<div class="about__top--addon">
 			dostrzegać sens i robić coś po coś, dlaczegoś. Zatrzymywać się, oddalać perspektywę i budzić
-			świadomość.<br /> Zarażać pasją. To cała ja.
+			świadomość. Zarażać pasją. To cała ja.
 		</div>
 		<div class="about__bottom">
 			Jestem Trenerem z dziesięcioletnim doświadczeniem w biznesie. <br>Tworzyłam autorską koncepcję
@@ -193,19 +193,21 @@
 
 		&__top {
 			@include h2;
-			margin: 100px 30px 0 100px;
+			margin: 100px 30px 0 150px;
 
 			&--addon {
 				font-family: ClashDisplay-Light, sans-serif;
-				margin: 10px 100px 50px 100px;
-				font-size: 17px;
+				margin: 10px 150px 50px 150px;
+				font-size: 20px;
+				line-height: 27px;
+				letter-spacing: 0.035em;
 			}
 		}
 
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
 			font-size: 24px;
-			margin: 0 100px 135px 100px;
+			margin: 0 100px 135px 150px;
 		}
 	}
 	.support {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../static/fonts/fonts.css';
+	import '$lib/fonts/fonts.css';
 </script>
 
 <section class="container" style="min-height:95vh;">
@@ -22,7 +22,7 @@
 			świadomość.<br /> Zarażać pasją. To cała ja.
 		</div>
 		<div class="about__bottom">
-			Jestem Trenerem z dziesięcioletnim doświadczeniem w biznesie. Tworzyłam autorską koncepcję
+			Jestem Trenerem z dziesięcioletnim doświadczeniem w biznesie. <br>Tworzyłam autorską koncepcję
 			rozwoju Pracowników w organizacji. Specjalizuję się w konstruowaniu i prowadzeniu szkoleń i
 			warsztatów z umiejętności miękkich w różnych obszarach i na różnych poziomach zaawansowania.
 			Moderując spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z impasu.
@@ -130,7 +130,7 @@
 </section>
 
 <style lang="scss">
-	@import '../lib/styling/style.scss';
+	@import '$lib/styling/style.scss';
 	.colored--wide {
 		width: 100vw;
 		overflow-x: hidden;
@@ -198,7 +198,7 @@
 			&--addon {
 				font-family: ClashDisplay-Light, sans-serif;
 				margin: 10px 100px 50px 100px;
-				font-size: 16px;
+				font-size: 17px;
 			}
 		}
 

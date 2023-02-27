@@ -3,8 +3,8 @@
 </script>
 
 <div class="contact">
-	<h1>Strona w trakcie pracy...</h1>
-	<div>Jeśli masz jakieś pytania - skontaktuj się ze mną pod adresem mailowym: <br /><b> joannakominiak@poczta.pl</b></div>
+	<h1><span>🚧</span>Strona w trakcie pracy <span>🚧</span></h1>
+	<div>Jeśli masz jakieś pytania - skontaktuj się ze mną pod adresem mailowym: <br /><b> kominiakpoczta@gmail.com</b></div>
 </div>
 
 <style lang="scss">

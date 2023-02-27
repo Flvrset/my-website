@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../../static/fonts/fonts.css';
-	import offer1 from "../../lib/images/offer1.png"
-	import pencil from "../../lib/images/pencil-with-eraser.png"
-	import yoga from "../../lib/images/person-doing-yoga-outdoors 1.png"
+	import offer1 from '../../lib/images/offer1.png';
+	import pencil from '../../lib/images/pencil-with-eraser.png';
+	import yoga from '../../lib/images/person-doing-yoga-outdoors 1.png';
 	let scroll: number;
 	let speed = 0.2;
 </script>
@@ -15,6 +15,7 @@
 <section class="container">
 	<div class="offer-with-image">
 		<img
+			draggable="false"
 			src={offer1}
 			style:transform={`translateY(${scroll * -1 * speed}px)`}
 			alt="offer_1"
@@ -58,7 +59,7 @@
 				<li>motywowanie</li>
 				<li>stres pod kontrolą</li>
 				<li>organizacja pracy</li>
-				<li>budowanie zaufanie</li>
+				<li>budowanie zaufania</li>
 				<li>delegowanie</li>
 			</ul>
 		</div>
@@ -69,7 +70,7 @@
 		<div class="custom">
 			<h2>Szukasz<br />innego<br />szkolenia?</h2>
 			<a href="/contact"> SKONTAKTUJ SIĘ ZE MNĄ </a>
-			<img alt="yoga" src={yoga} />
+			<img draggable="false" alt="yoga" src={yoga} />
 		</div>
 	</div>
 </section>
@@ -78,7 +79,7 @@
 		<h2>Train the Trainer<br />szlifowanie kunsztu</h2>
 		<span>Celem tych warsztatów jest nauczenie:</span>
 		<ul>
-			<li>kontruowanie wsadu szkoleń</li>
+			<li>konstruowanie wsadu szkoleń</li>
 			<li>kontraktowanie</li>
 			<li>kunszt uczenia osób dorosłych</li>
 			<li>fazy życia grupy</li>
@@ -89,6 +90,7 @@
 		</ul>
 	</div>
 	<img
+		draggable="false"
 		src={pencil}
 		style="position: relative; width: 503px; top: 151px; left: 285px;"
 		alt="pencil"
@@ -277,7 +279,7 @@
 	.gradient {
 		position: absolute;
 		z-index: -1;
-		background: url("../../lib/images/mesh-gradient.png");
+		background: url('../../lib/images/mesh-gradient.png');
 		width: 1203px;
 		height: 950px;
 		border-radius: 105px;

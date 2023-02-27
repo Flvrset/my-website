@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '$lib/fonts/fonts.css';
 	import offer1 from '$lib/images/offer1.png';
-	import pencil from '$lib/images/pencil-with-eraser.png';
 	import yoga from '$lib/images/person-doing-yoga-outdoors 1.png';
 	let scroll: number;
 	let speed = 0.2;

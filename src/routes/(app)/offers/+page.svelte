@@ -2,6 +2,7 @@
 	import '$lib/fonts/fonts.css';
 	import offer1 from '$lib/images/offer1.webp';
 	import yoga from '$lib/images/person-doing-yoga-outdoors 1.png';
+	import gradient from '$lib/images/mesh-gradient.png';
 	let scroll: number;
 	let speed = 0.2;
 </script>
@@ -72,7 +73,7 @@
 		<div class="custom">
 			<h2>Szukasz<br />innego<br />szkolenia?</h2>
 			<a href="/contact"> SKONTAKTUJ SIĘ ZE MNĄ </a>
-			<img draggable="false" alt="yoga" src={yoga} />
+			<img draggable="false" alt="yoga" src={yoga} loading="lazy"/>
 		</div>
 	</div>
 </section>
@@ -98,7 +99,7 @@
 		<h2>Konstruowanie i podpinanie pracowników organizacji pod misję, wizję i wartości.</h2>
 	</div>
 </section>
-<div style:transform={`translateY(${scroll * -1 * speed + 100}px)`} class="gradient" />
+<img alt="" style:transform={`translateY(${scroll * -1 * speed + 100}px)`} class="gradient" src={gradient} draggable="false" loading="lazy"/>
 <section class="container">
 	<div class="offer offer__fifth" id="offer_4">
 		<h2>Gdy wiedza jest w zespole...</h2>
@@ -284,7 +285,6 @@
 	.gradient {
 		position: absolute;
 		z-index: -1;
-		background: url('$lib/images/mesh-gradient.png');
 		width: 1000px;
 		height: 500px;
 		border-radius: 105px;

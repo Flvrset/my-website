@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '$lib/fonts/fonts.css';
-	import offer1 from '$lib/images/offer1.png';
+	import offer1 from '$lib/images/offer1.webp';
 	import yoga from '$lib/images/person-doing-yoga-outdoors 1.png';
 	let scroll: number;
 	let speed = 0.2;
@@ -14,6 +14,7 @@
 <section class="container">
 	<div class="offer-with-image">
 		<img
+		
 			draggable="false"
 			src={offer1}
 			style:transform={`translateY(${scroll * -1 * speed + 60}px)`}

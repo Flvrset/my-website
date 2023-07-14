@@ -10,6 +10,7 @@
 			href="https://www.linkedin.com/in/joanna-kominiak-936b33253/"
 			target="_blank"
 			rel="noreferrer"
+			aria-label="linked in link"
 		>
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 				><path

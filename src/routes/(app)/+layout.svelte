@@ -1,3 +1,5 @@
+
+
 <div class="navbar">
 	<a href="/">HOME</a>
 	<!-- svelte-ignore a11y-mouse-events-have-key-events -->

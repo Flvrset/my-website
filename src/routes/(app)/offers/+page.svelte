@@ -155,8 +155,6 @@
 			border-radius: 172px;
 			position: relative;
 			left: 81px;
-			width: 540px;
-			height: 485px;
 		}
 	}
 

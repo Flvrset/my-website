@@ -15,11 +15,11 @@
 <section class="container">
 	<div class="offer-with-image">
 		<img
-		
 			draggable="false"
 			src={offer1}
 			style:transform={`translateY(${scroll * -1 * speed + 60}px)`}
 			alt="offer_1"
+			style="position: absolute;"
 		/>
 		<div class="offer offer__first" style="background-color: #EB5E28; color: white;" id="offer_1">
 			<h2>Wzmacnianie efektywności</h2>
@@ -69,7 +69,7 @@
 	</div>
 </section>
 <section class="colored--wide" style="background-color: #252422;">
-	<div class="container" style="min-height: 693px; display: block;">
+	<div class="container" style="min-height: 629px; display: block;">
 		<div class="custom">
 			<h2>Szukasz<br />innego<br />szkolenia?</h2>
 			<a href="/contact"> SKONTAKTUJ SIĘ ZE MNĄ </a>
@@ -95,11 +95,11 @@
 	
 </section>
 <section class="container">
-	<div class="offer offer__fourth" id="offer_4">
+	<div class="offer offer__fourth" id="offer_4" style="position: relative;">
 		<h2>Konstruowanie i podpinanie pracowników organizacji pod misję, wizję i wartości.</h2>
 	</div>
+	<img alt="" style:transform={`translateY(${scroll * -1 * speed + 800}px)`} class="gradient" src={gradient} draggable="false" loading="lazy"/>
 </section>
-<img alt="" style:transform={`translateY(${scroll * -1 * speed + 100}px)`} class="gradient" src={gradient} draggable="false" loading="lazy"/>
 <section class="container">
 	<div class="offer offer__fifth" id="offer_4">
 		<h2>Gdy wiedza jest w zespole...</h2>
@@ -141,28 +141,29 @@
 		justify-content: center;
 		align-items: center;
 
-		width: 1064px;
-		margin-left: auto;
-		margin-right: auto;
+		width: 100%;
+		max-width: 1064px;
+		margin: auto;
 		min-height: 80vh;
-		max-width: calc(100% - 20px);
 	}
 
 	.offer-with-image {
 		display: flex;
-		position: absolute;
+		position: relative;
 		align-items: center;
 		margin-bottom: 40px;
 		> img {
 			border-radius: 172px;
-			position: relative;
-			left: 81px;
+			position: absolute;
+			z-index: 1;
+			right: 514px;
 		}
 	}
 
 	.colored--wide {
 		width: 100vw;
 		overflow-x: hidden;
+		min-height: 680px;
 	}
 
 	.custom {
@@ -170,7 +171,7 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		color: #ccc5b9;
-		position: absolute;
+		position: relative;
 		> h2 {
 			font-family: ClashDisplay-Medium;
 			font-size: 96px;
@@ -195,10 +196,11 @@
 			}
 		}
 		img {
-			width: 910px;
-			position: relative;
-			bottom: 376px;
+			width: 100%;
+			max-width: 910px;
+			position: absolute;
 			left: 260px;
+			top: 51px;
 		}
 	}
 
@@ -237,6 +239,7 @@
 			min-height: 621px;
 			max-width: 608px;
 			margin-bottom: 30px;
+			margin-left: 470px;
 		}
 		&__second {
 			min-height: 621px;
@@ -245,9 +248,9 @@
 		}
 		&__third {
 			max-width: 1064px;
-			min-height: 555px;
+			margin-top: 100px;
+			padding: 50px 20px;
 			background-color: #fffcf2;
-			position: absolute;
 		}
 		&__fourth {
 			min-height: 519px;
@@ -285,15 +288,11 @@
 	.gradient {
 		position: absolute;
 		z-index: -1;
-		width: 1000px;
+		max-width: 1000px;
+		width: 100%;
 		height: 500px;
 		border-radius: 105px;
-		text-align: center;
-		background-size: cover;
-		left: 100px;
-		right: 0;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: 120px;
 	}
 
 	.contact {

@@ -73,7 +73,7 @@
 		<div class="custom">
 			<h2>Szukasz<br />innego<br />szkolenia?</h2>
 			<a href="/contact"> SKONTAKTUJ SIĘ ZE MNĄ </a>
-			<img draggable="false" alt="yoga" src={yoga} loading="lazy"/>
+			<img draggable="false" alt="yoga" src={yoga} loading="lazy" />
 		</div>
 	</div>
 </section>
@@ -92,13 +92,19 @@
 			<li>obawy i nadzieje Trenera</li>
 		</ul>
 	</div>
-	
 </section>
 <section class="container">
 	<div class="offer offer__fourth" id="offer_4" style="position: relative;">
 		<h2>Konstruowanie i podpinanie pracowników organizacji pod misję, wizję i wartości.</h2>
 	</div>
-	<img alt="" style:transform={`translateY(${scroll * -1 * speed + 800}px)`} class="gradient" src={gradient} draggable="false" loading="lazy"/>
+	<img
+		alt=""
+		style:transform={`translateY(${scroll * -1 * speed + 800}px)`}
+		class="gradient"
+		src={gradient}
+		draggable="false"
+		loading="lazy"
+	/>
 </section>
 <section class="container">
 	<div class="offer offer__fifth" id="offer_4">
@@ -153,7 +159,7 @@
 		align-items: center;
 		margin-bottom: 40px;
 		> img {
-			border-radius: 172px;
+			border-radius: 14vmin;
 			position: absolute;
 			z-index: 1;
 			right: 514px;
@@ -208,7 +214,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		border-radius: 108px;
+		border-radius: 12vmin;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
 
 		h2,
@@ -291,7 +297,7 @@
 		max-width: 1000px;
 		width: 100%;
 		height: 500px;
-		border-radius: 105px;
+		border-radius: 13vmin;
 		margin-left: 120px;
 	}
 
@@ -316,6 +322,92 @@
 			&:hover {
 				transform: scale(1.05);
 				transition: 0.2s ease-in-out;
+			}
+		}
+	}
+	@media screen and (max-width: 767px) {
+		.header {
+			padding: 0 10px; /* Reduce horizontal padding */
+		}
+
+		.container {
+			max-width: 100%;
+		}
+
+		.offer-with-image {
+			flex-direction: column;
+			margin-bottom: 10px; /* Reduce bottom margin */
+			> img {
+				position: static;
+				transform: none;
+				display: none;
+			}
+		}
+
+		.colored--wide {
+			width: 100%;
+			overflow-x: hidden;
+			min-height: auto;
+		}
+
+		.custom {
+			h2 {
+				font-size: 32px;
+				margin-top: 20px;
+				margin-bottom: 40px; /* Reduce bottom margin */
+			}
+
+			a {
+				width: 100%;
+			}
+
+			img {
+				left: 0;
+				top: auto;
+			}
+		}
+
+		.offer {
+			margin-left: 5px;
+			margin-right: 5px;
+			padding: 10px; /* Reduce padding */
+
+			h2 {
+				font-size: 24px; /* Reduce font size */
+				margin-top: 15px; /* Reduce top margin */
+				margin-bottom: 5px; /* Reduce bottom margin */
+			}
+
+			span {
+				font-size: 16px; /* Reduce font size */
+			}
+
+			ul {
+				font-size: 16px; /* Reduce font size */
+			}
+			h2,
+			span,
+			ul {
+				margin: 0 10px;
+			}
+
+			&--list {
+				margin-left: 5px;
+				margin-right: 0;
+			}
+		}
+
+		.gradient {
+			margin-left: 0;
+			border-radius: inherit;
+		}
+
+		.contact {
+			h1 {
+				// Mobile specific style
+				font-size: 32px;
+				margin-top: 20px;
+				margin-bottom: 40px;
 			}
 		}
 	}

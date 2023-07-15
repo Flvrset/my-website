@@ -22,10 +22,11 @@
 			świadomość. Zarażać pasją. To cała ja.
 		</div>
 		<div class="about__bottom">
-			Jestem Trenerem z dziesięcioletnim doświadczeniem w biznesie. <br>Tworzyłam autorską koncepcję
-			rozwoju Pracowników w organizacji. Specjalizuję się w konstruowaniu i prowadzeniu szkoleń i
-			warsztatów z umiejętności miękkich w różnych obszarach i na różnych poziomach zaawansowania.
-			Moderując spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z impasu.
+			Jestem Trenerem z dziesięcioletnim doświadczeniem w biznesie. <br />Tworzyłam autorską
+			koncepcję rozwoju Pracowników w organizacji. Specjalizuję się w konstruowaniu i prowadzeniu
+			szkoleń i warsztatów z umiejętności miękkich w różnych obszarach i na różnych poziomach
+			zaawansowania. Moderując spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z
+			impasu.
 		</div>
 	</div>
 </section>
@@ -187,7 +188,7 @@
 		width: 100%;
 		background: #252422;
 		box-shadow: 0px 4px 41px -7px rgba(0, 0, 0, 0.25);
-		border-radius: 25vmin;
+		border-radius: 12vmin;
 		color: white;
 		margin: 50px auto;
 

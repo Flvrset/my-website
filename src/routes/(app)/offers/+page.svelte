@@ -173,7 +173,7 @@
 
 	.colored--wide {
 		width: 100vw;
-		overflow-x: hidden;
+		overflow: hidden;
 		min-height: 680px;
 	}
 

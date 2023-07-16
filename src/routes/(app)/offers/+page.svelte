@@ -69,7 +69,7 @@
 	</div>
 </section>
 <section class="colored--wide" style="background-color: #252422;">
-	<div class="container" style="min-height: 629px; display: block;">
+	<div class="container container--custom">
 		<div class="custom">
 			<h2>Szukasz<br />innego<br />szkolenia?</h2>
 			<a href="/contact"> SKONTAKTUJ SIĘ ZE MNĄ </a>
@@ -151,6 +151,11 @@
 		max-width: 1064px;
 		margin: auto;
 		min-height: 80vh;
+
+		&--custom {
+			min-height: 629px; 
+			display: block;
+		}
 	}
 
 	.offer-with-image {
@@ -325,13 +330,18 @@
 			}
 		}
 	}
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: 480px) {
 		.header {
 			padding: 0 10px; /* Reduce horizontal padding */
 		}
 
 		.container {
 			max-width: 100%;
+			min-height: 50vh;
+
+			&--custom {
+				min-height: 601px;
+			}
 		}
 
 		.offer-with-image {
@@ -351,19 +361,20 @@
 		}
 
 		.custom {
+			align-items: center;
 			h2 {
-				font-size: 32px;
-				margin-top: 20px;
+				font-size: 4em;
+				margin-top: 40px;
 				margin-bottom: 40px; /* Reduce bottom margin */
 			}
 
 			a {
-				width: 100%;
+				width: 350px;
 			}
 
 			img {
 				left: 0;
-				top: auto;
+				top: 100%;
 			}
 		}
 
@@ -373,13 +384,13 @@
 			padding: 10px; /* Reduce padding */
 
 			h2 {
-				font-size: 24px; /* Reduce font size */
+				@include h2;
 				margin-top: 15px; /* Reduce top margin */
 				margin-bottom: 5px; /* Reduce bottom margin */
 			}
 
 			span {
-				font-size: 16px; /* Reduce font size */
+				font-size: 1.25em; /* Reduce font size */
 			}
 
 			ul {
@@ -388,26 +399,59 @@
 			h2,
 			span,
 			ul {
-				margin: 0 10px;
+				margin: 10px;
 			}
 
 			&--list {
 				margin-left: 5px;
 				margin-right: 0;
+				margin-bottom: 10px;
+				gap: 0px;
 			}
+
+			&__first {
+				min-height: 500px;
+			}
+
+			&__second {
+				min-height: 650px;
+				ul {
+					margin: 0;
+				}
+			}
+
+			&__third {
+				margin-top: 50px;
+				padding: 30px;
+			}
+
+			&__fourth {
+				margin-top: 50px;
+				min-height: 370px;
+			}
+
+			&__fifth {
+				margin-top: 50px;
+				padding: 30px;
+			}
+
+			
 		}
 
 		.gradient {
-			margin-left: 0;
-			border-radius: inherit;
+			display: none;
 		}
 
 		.contact {
+			margin-top: 50px;
+			margin-bottom: 50px;
 			h1 {
-				// Mobile specific style
-				font-size: 32px;
-				margin-top: 20px;
-				margin-bottom: 40px;
+				font-size: 3.5em;
+				margin: 0 25px 40px 25px;
+			}
+
+			a {
+				width: 350px;
 			}
 		}
 	}

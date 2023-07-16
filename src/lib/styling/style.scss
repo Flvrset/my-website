@@ -14,12 +14,18 @@
     font-weight: 500;
     font-size: 6em;
     letter-spacing: -0.2px;
+	@media screen and (max-width: 480px) {
+        font-size: 4em;
+    }
 }
 
 @mixin h2 {
     font-family: ClashDisplay-Medium, sans-serif;
-    font-size: 64px;
+    font-size: 4em;
     line-height: 81%;
+    @media screen and (max-width: 480px) {
+        font-size: 3em;
+    }
 }
 
 @mixin h2-semibold {

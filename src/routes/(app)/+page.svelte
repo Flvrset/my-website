@@ -157,6 +157,10 @@
 			text-transform: uppercase;
 			a {
 				@include button;
+				@media screen and (max-width: 480px) {
+					width: auto;
+					padding: 0 20px;
+				}
 				transition: 0.1s ease-in-out;
 
 				&:hover {
@@ -169,12 +173,21 @@
 				background: #eb5e28;
 				letter-spacing: 0.065em;
 				font-size: 0.875em;
+				@media screen and (max-width: 480px) {
+					font-size: 0.75em;
+					width: 116px !important;
+				}
 			}
 			&--offers {
 				display: flex;
 				background: #403d39;
 				letter-spacing: 0.07em;
 				font-size: 0.9375em;
+
+				@media screen and (max-width: 480px) {
+					font-size: 0.79em;
+					width: 160px !important;
+				}
 			}
 		}
 	}
@@ -196,19 +209,34 @@
 			@include h2;
 			margin: 100px 30px 0 150px;
 
+			@media screen and (max-width: 480px) {
+				margin-left: 25px;
+				margin-bottom: 20px;
+			}
+
 			&--addon {
 				font-family: ClashDisplay-Light, sans-serif;
 				margin: 10px 150px 50px 150px;
 				font-size: 20px;
 				line-height: 27px;
 				letter-spacing: 0.035em;
+				@media screen and (max-width: 480px) {
+					margin-left: 25px;
+					margin-right: 30px;
+					margin-bottom: 10px;
+				}
 			}
 		}
 
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
-			font-size: 24px;
+			font-size: 1.5em;
 			margin: 0 100px 135px 150px;
+			@media screen and (max-width: 480px) {
+				margin-left: 25px;
+				margin-right: 30px;
+				font-size: 1.25em;
+			}
 		}
 	}
 	.support {
@@ -220,6 +248,9 @@
 		align-items: flex-start;
 		color: white;
 		gap: 20px;
+		@media screen and (max-width: 480px) {
+			padding-left: 20px;
+		}
 		> h2 {
 			@include h2-semibold;
 			margin: 0;
@@ -231,13 +262,17 @@
 		}
 		a {
 			font-family: ClashDisplay-Bold;
-			font-size: 64px;
+			font-size: 4em;
 			color: #e2551f;
 			text-decoration: none;
 			transition: 300ms ease;
 			&:hover {
 				color: #ffb79b;
 				transition: 300ms ease;
+			}
+			@media screen and (max-width: 480px) {
+				font-size: 3em;
+				color: #7a3d19;
 			}
 		}
 	}
@@ -249,7 +284,8 @@
 		flex-wrap: wrap;
 		margin: 30px auto;
 		> div {
-			height: 617px;
+			min-height: 580px;
+			max-height: 617px;
 			background-color: #fffcf2;
 			color: #252422;
 			border-radius: 10vmin;
@@ -291,6 +327,9 @@
 		width: auto;
 		position: relative;
 		color: #fffcf2;
+		@media screen and (max-width: 480px) {
+			margin: 35px 0;
+		}
 		svg {
 			position: absolute;
 			bottom: 310px;
@@ -320,12 +359,18 @@
 
 		> h2 {
 			@include h2-semibold;
+			@media screen and (max-width: 480px) {
+				font-size: 2.5em;
+			}
 		}
 
 		> span {
 			font-family: DMSans-Regular;
-			font-size: 30px;
+			font-size: 1.875em;
 			margin-bottom: 50px;
+			@media screen and (max-width: 480px) {
+				font-size: 1.45em;
+			}
 		}
 
 		> a {

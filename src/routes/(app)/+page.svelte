@@ -185,7 +185,7 @@
 				font-size: 0.9375em;
 
 				@media screen and (max-width: 480px) {
-					font-size: 0.79em;
+					font-size: 0.75em;
 					width: 160px !important;
 				}
 			}
@@ -272,7 +272,6 @@
 			}
 			@media screen and (max-width: 480px) {
 				font-size: 3em;
-				color: #7a3d19;
 			}
 		}
 	}

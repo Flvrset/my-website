@@ -5,6 +5,7 @@
 </script>
 
 <div class="contact">
+	<h1>Napisz do mnie!</h1>
 	<form method="POST" use:enhance>
 		<fieldset class="contact__fieldset">
 			{#if form?.missingName}
@@ -66,10 +67,8 @@
 				</div>
 			</div>
 
-			<div class="form-group">
-				<div class="col-md-12">
-					<button type="submit" class="btn btn-primary">Wyślij</button>
-				</div>
+			<div class="">
+				<button type="submit" class="contact__button">Wyślij</button>
 			</div>
 		</fieldset>
 	</form>
@@ -96,10 +95,10 @@
 
 		&--area {
 			> input::placeholder {
-				font-family: ClashDisplay-light;
+				font-family: DMSans-Regular;
 			}
 			> input {
-				font-family: ClashDisplay-medium;
+				font-family: DMSans-Regular;
 			}
 		}
 
@@ -121,10 +120,10 @@
 				}
 				&-area {
 					> textarea::placeholder {
-						font-family: ClashDisplay-light;
+						font-family: DMSans-Regular, sans-serif;
 					}
 					> textarea {
-						font-family: ClashDisplay-medium;
+						font-family: DMSans-Regular, sans-serif;
 						width: 100%;
 					}
 				}
@@ -143,6 +142,10 @@
 			> b {
 				font-size: 30px;
 			}
+		}
+
+		&__button {
+
 		}
 	}
 </style>

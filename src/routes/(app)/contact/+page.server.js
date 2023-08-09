@@ -25,7 +25,7 @@ export const actions = {
             subject: "Dostałaś wiadomość wysłaną przez twoją stronę!",
             text: `Mail: ${email}\nTelefon: ${phone}\nWiadomość:\n${message}`
         }
-        return await MailService.send(msg)
+        return await mailService.send(msg)
             .then(() => {
                 return { success: true };
             })

@@ -1,6 +1,6 @@
 import { fail } from '@sveltejs/kit';
 // @ts-ignore
-import mail, * as MailService from '@sendgrid/mail';
+import * as MailService from '@sendgrid/mail';
 import { MAIL_API_KEY } from '$env/static/private';
 
 export const actions = {

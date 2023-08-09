@@ -17,6 +17,7 @@ export const actions = {
             return fail(400, { email, missingContact: true });
         if (!message)
             return fail(400, { message, missingMessage: true });
+        console.log(MAIL_API_KEY)
         MailService.setApiKey(MAIL_API_KEY);
         const msg = {
             to: "kominiakpoczta@gmail.com",

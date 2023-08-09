@@ -1,14 +1,16 @@
 <script>
 	import '$lib/fonts/fonts.css';
 	import { enhance } from '$app/forms';
-	import Error from '../../+error.svelte';
 	export let form;
 </script>
 
 <div class="contact">
 	<h1>Napisz do mnie!</h1>
 	<form method="POST" use:enhance>
-		<fieldset class="contact__fieldset" style="display: flex; align-items: center;">
+		<fieldset
+			class="contact__fieldset"
+			style="display: flex; align-items: center; max-width: 550px;"
+		>
 			<div class="contact__fieldset">
 				{#if form?.missingName}
 					<p class="error">Jak się nazywasz?</p>
@@ -92,17 +94,18 @@
 			<div>
 				{#if !form?.success}
 					<button type="submit" class="contact__button">Wyślij</button>
+				{:else if form?.failWhileSending}
+					<div class="error">
+						Wystąpił problem podczas wysyłania wiadomości, spróbuj ponownie za jakiś czas lub napisz
+						do mnie na: <strong> kominiakpoczta@gmail.com </strong>
+					</div>
 				{:else}
-					<div class="success">Dziękuję za kontakt! Odezwę się do ciebie jak najszybciej! </div>
+					<div class="success">Dziękuję za kontakt! Odezwę się do ciebie jak najszybciej!</div>
 				{/if}
 			</div>
 		</fieldset>
 	</form>
 </div>
-
-{#if form?.success}
-	<div>xd</div>
-{/if}
 
 <style lang="scss">
 	@import '$lib/styling/style.scss';
@@ -186,6 +189,7 @@
 			@include h1;
 			display: flex;
 			align-items: center;
+			padding: 0 10px;
 		}
 
 		&__button {

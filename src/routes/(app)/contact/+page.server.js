@@ -19,7 +19,7 @@ export const actions = {
 
 function isValidPhoneNumber(phone) {
     const cleanedPhoneNumber = phone.replace(/\D/g, '');
-    const phoneRegex = RegExp("(^|\W)(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}(?!\w)");
+    const phoneRegex = /^(?:(?:(?:\+|00)?48)|(?:\(\+?48\)))?(?:1[2-8]|2[2-69]|3[2-49]|4[1-8]|5[0-9]|6[0-35-9]|[7-8][1-9]|9[145])\d{7}$/;
     return phoneRegex.test(cleanedPhoneNumber);
 }
 

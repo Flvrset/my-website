@@ -1,7 +1,7 @@
 import { fail } from '@sveltejs/kit';
 // @ts-ignore
 import mailService from '@sendgrid/mail';
-import { MAIL_API_KEY } from '$lib/Env.js';
+import { MAIL_API_KEY } from '$env/static/private';
 
 mailService.setApiKey(MAIL_API_KEY);
 

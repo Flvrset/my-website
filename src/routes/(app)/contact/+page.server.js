@@ -1,7 +1,9 @@
 import { fail } from '@sveltejs/kit';
 // @ts-ignore
-import * as MailService from '@sendgrid/mail';
-import { MAIL_API_KEY } from '$env/static/private';
+import mailService from '@sendgrid/mail';
+import { MAIL_API_KEY } from '$lib/Env.js';
+
+mailService.setApiKey(MAIL_API_KEY);
 
 export const actions = {
     // @ts-ignore
@@ -17,14 +19,13 @@ export const actions = {
             return fail(400, { email, missingContact: true });
         if (!message)
             return fail(400, { message, missingMessage: true });
-        MailService.setApiKey(MAIL_API_KEY);
         const msg = {
             to: "kominiakpoczta@gmail.com",
             from: "mkominiak11@gmail.com",
             subject: "Dostałaś wiadomość wysłaną przez twoją stronę!",
             text: `Mail: ${email}\nTelefon: ${phone}\nWiadomość:\n${message}`
         }
-        return await MailService.send(msg)
+        return await mailService.send(msg)
             .then(() => {
                 return { success: true };
             })

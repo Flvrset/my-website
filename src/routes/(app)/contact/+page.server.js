@@ -11,7 +11,7 @@ export const actions = {
         const name = formData.get('name');
         const message = formData.get('message');
         const phone = formData.get('phone');
-        if (!isValidName(name))
+        if (!name)
             return fail(400, { name, missingName: true });
         if (!isValidEmail(email) && !isValidPhoneNumber(phone))
             return fail(400, { email, missingContact: true });
@@ -45,10 +45,4 @@ function isValidPhoneNumber(phone) {
 function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
-}
-
-// @ts-ignore
-function isValidName(name) {
-    const nameRegex = /^[a-zA-Z\u00C0-\u017F'’-]+(?: [a-zA-Z\u00C0-\u017F'’-]+)*$/;
-    return nameRegex.test(name);
 }

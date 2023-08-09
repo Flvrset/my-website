@@ -13,11 +13,11 @@
 		>
 			<div class="contact__fieldset">
 				{#if form?.missingName}
-					<p class="error">Jak się nazywasz?</p>
+					<p class="error">Jak mam się do Ciebie zwracać?</p>
 				{:else if form?.missingContact}
-					<p class="error">Muszę się z tobą jakoś skontaktować, nie?</p>
+					<p class="error">Podaj, proszę wygodną dla Ciebie formę kontaktu.</p>
 				{:else if form?.missingMessage}
-					<p class="error">Śmiało, napisz coś!</p>
+					<p class="error">Śmiało, zostaw kilka słów!</p>
 				{/if}
 
 				<div class="form-group">
@@ -100,7 +100,7 @@
 						do mnie na: <strong> kominiakpoczta@gmail.com </strong>
 					</div>
 				{:else}
-					<div class="success">Dziękuję za kontakt! Odezwę się do ciebie jak najszybciej!</div>
+					<div class="success">Dziękuję za kontakt! Odezwę się do Ciebie jak najszybciej!</div>
 				{/if}
 			</div>
 		</fieldset>

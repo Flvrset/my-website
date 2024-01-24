@@ -1,7 +1,7 @@
 import { fail } from '@sveltejs/kit';
 // @ts-ignore
 import mailService from '@sendgrid/mail';
-import { MAIL_API_KEY } from '$env/static/private';
+import { MAIL_API_KEY, CAPTCHA_KEY } from '$env/static/private';
 
 mailService.setApiKey(MAIL_API_KEY);
 
@@ -9,6 +9,10 @@ export const actions = {
     // @ts-ignore
     default: async ({ request }) => {
         const formData = await request.formData();
+        const response = await fetch('https://www.google.com/recaptcha/api/siteverify', { method: 'POST', headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: `secret=${CAPTCHA_KEY}&response=${formData.get('token')}` })
+        const resp = await response.json();
+        if (resp.score < 0.5)
+            return { failWhileSending: true };
         const email = formData.get('email');
         const name = formData.get('name');
         const message = formData.get('message');

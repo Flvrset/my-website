@@ -1,12 +1,38 @@
 <script>
 	import '$lib/fonts/fonts.css';
-	import { enhance } from '$app/forms';
+	import { applyAction, enhance } from '$app/forms';
 	export let form;
+	const captcha_public_key = "6LfbdFspAAAAAOyH5NLiq_yUSy4gsPqM1jHWt87-"
 </script>
 
+<svelte:head>
+	<script
+		src="https://www.google.com/recaptcha/api.js?render={captcha_public_key}"
+	></script>
+</svelte:head>
+
 <div class="contact">
+	<div id="recaptchabox" />
 	<h1>Napisz do mnie!</h1>
-	<form method="POST" use:enhance>
+	<form
+		method="POST"
+		use:enhance={async ({ formData }) => {
+			const captcha = new Promise((resolve) => {
+				grecaptcha.ready(function () {
+					grecaptcha
+						.execute(captcha_public_key, { action: 'submit' })
+						.then(function (t) {
+							formData.append('token', t);
+							resolve();
+						});
+				});
+			});
+			await captcha;
+			return async ({ result }) => {
+				await applyAction(result);
+			};
+		}}
+	>
 		<fieldset
 			class="contact__fieldset"
 			style="display: flex; align-items: center; max-width: 550px;"

@@ -9,10 +9,10 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<div class="header">
+<div class="header wannabe-shown-on-scroll">
 	<h1>Zaglądnij <br /> do mojego menu</h1>
 </div>
-<section class="container">
+<section class="container wannabe-shown-on-scroll">
 	<div class="offer-with-image">
 		<img
 			draggable="false"
@@ -77,7 +77,7 @@
 		</div>
 	</div>
 </section>
-<section class="container">
+<section class="container wannabe-shown-on-scroll wannabe-shown-on-scroll--left">
 	<div class="offer offer__third" id="offer_3">
 		<h2>Train the Trainer<br />szlifowanie kunsztu</h2>
 		<span>tutaj dzielę się wiedzą:</span>
@@ -106,7 +106,7 @@
 		loading="lazy"
 	/>
 </section>
-<section class="container">
+<section class="container wannabe-shown-on-scroll wannabe-shown-on-scroll--right">
 	<div class="offer offer__fifth" id="offer_4">
 		<h2>Gdy wiedza jest w zespole...</h2>
 		<span
@@ -132,8 +132,6 @@
 </section>
 
 <style lang="scss">
-	@import '$lib/styling/style.scss';
-
 	.header {
 		padding: 0 50px;
 		max-width: calc(100% - 20px);

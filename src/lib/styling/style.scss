@@ -14,7 +14,8 @@
     font-weight: 500;
     font-size: 6em;
     letter-spacing: -0.2px;
-	@media screen and (max-width: 480px) {
+
+    @media screen and (max-width: 480px) {
         font-size: 4em;
     }
 }
@@ -23,6 +24,7 @@
     font-family: ClashDisplay-Medium, sans-serif;
     font-size: 4em;
     line-height: 81%;
+
     @media screen and (max-width: 480px) {
         font-size: 3em;
     }
@@ -32,6 +34,7 @@
     font-family: ClashDisplay-Semibold, sans-serif;
     font-size: 4em;
     line-height: 81%;
+
     @media screen and (max-width: 480px) {
         font-size: 3em;
     }
@@ -62,8 +65,34 @@
     text-decoration: none;
     color: white;
     box-shadow: 5px 5px 13px rgba(221, 229, 230, 0.9);
+
     @media screen and (max-width: 480px) {
         min-width: 330px;
         font-size: 1.25em;
     }
+}
+
+:global(.wannabe-shown-on-scroll) {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+
+    @media(prefers-reduced-motion) {
+        transition: none;
+    }
+}
+
+:global(.wannabe-shown-on-scroll--right) {
+    transform: translateX(50%);
+}
+
+:global(.wannabe-shown-on-scroll--left) {
+    transform: translateX(-50%);
+}
+
+
+:global(.show-on-scroll) {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }

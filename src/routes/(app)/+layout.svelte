@@ -29,6 +29,7 @@
 
 <style lang="scss">
 	.navbar {
+		z-index: 100;
 		display: flex;
 		justify-content: space-between;
 		@media screen and (max-width: 767px) {

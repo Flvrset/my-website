@@ -1,8 +1,4 @@
-<script lang="ts">
-	import '$lib/fonts/fonts.css';
-</script>
-
-<section class="container" style="min-height:95vh;">
+<section class="container wannabe-shown-on-scroll wannabe-shown-on-scroll--left" style="min-height:95vh;">
 	<div class="hero">
 		<h1>Joanna Kominiak</h1>
 		<div class="hero__bottom">Trener Biznesu | Facylitator</div>
@@ -12,7 +8,7 @@
 		</div>
 	</div>
 </section>
-<section class="container">
+<section class="container wannabe-shown-on-scroll wannabe-shown-on-scroll--right">
 	<div class="about">
 		<h2 class="about__top">
 			Pracować mądrzej,<br /> uwalniać od absurdu...
@@ -92,7 +88,10 @@
 	</div>
 </section>
 <section class="colored--wide" style="background-color: #252422;">
-	<div class="container" style="min-height: 561px;">
+	<div
+		class="container wannabe-shown-on-scroll wannabe-shown-on-scroll--left"
+		style="min-height: 561px;"
+	>
 		<div class="quotes">
 			<svg width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg"
 				><path
@@ -131,7 +130,6 @@
 </section>
 
 <style lang="scss">
-	@import '$lib/styling/style.scss';
 	.colored--wide {
 		width: 100vw;
 		overflow-x: hidden;
@@ -140,8 +138,8 @@
 		display: flex;
 		flex-direction: column;
 		h1 {
-			@include h1;
 			margin: 0;
+			@include h1;
 		}
 		&__bottom {
 			font-family: DMSans-Regular, sans-serif;
@@ -157,11 +155,11 @@
 			text-transform: uppercase;
 			a {
 				@include button;
+				transition: 0.1s ease-in-out;
 				@media screen and (max-width: 480px) {
 					width: auto;
 					padding: 0 20px;
 				}
-				transition: 0.1s ease-in-out;
 
 				&:hover {
 					transform: scale(1.05);
@@ -206,8 +204,8 @@
 		margin: 50px auto;
 
 		&__top {
-			@include h2;
 			margin: 100px 30px 0 150px;
+			@include h2;
 
 			@media screen and (max-width: 480px) {
 				margin-left: 25px;
@@ -252,8 +250,8 @@
 			padding-left: 20px;
 		}
 		> h2 {
-			@include h2-semibold;
 			margin: 0;
+			@include h2-semibold;
 		}
 		h3 {
 			font-family: ClashDisplay-Light, sans-serif;
@@ -263,11 +261,11 @@
 		a {
 			font-family: ClashDisplay-Bold;
 			font-size: 4em;
-			color: #e2551f;
+			color: #ffb79b;
 			text-decoration: none;
 			transition: 300ms ease;
 			&:hover {
-				color: #ffb79b;
+				color: #e2551f;
 				transition: 300ms ease;
 			}
 			@media screen and (max-width: 480px) {
@@ -373,10 +371,10 @@
 		}
 
 		> a {
-			@include button-big;
 			background-color: #eb5e28;
 			letter-spacing: 0.055em;
 			transition: 0.2s ease-in-out;
+			@include button-big;
 
 			&:hover {
 				transform: scale(1.05);

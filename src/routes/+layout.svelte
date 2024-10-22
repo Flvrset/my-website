@@ -1,6 +1,8 @@
 <script>
 	import { afterUpdate } from 'svelte';
 	import '$lib/fonts/fonts.css';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	injectSpeedInsights();
 	afterUpdate(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {

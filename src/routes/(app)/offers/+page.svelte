@@ -18,10 +18,11 @@
 			draggable="false"
 			src={offer1}
 			style:transform={`translateY(${scroll * -1 * speed + 60}px)`}
-			alt="offer_1"
+			alt="Wzmacnianie efektywności"
+			aria-hidden="true"
 			style="position: absolute;"
 		/>
-		<div class="offer offer__first" style="background-color: #EB5E28; color: white;" id="offer_1">
+		<div class="offer offer__first" style="background-color: #9C3411; color: white;" id="offer_1">
 			<h2>Wzmacnianie efektywności</h2>
 			<span>w tych warsztatach skupiam się na:</span>
 			<div class="offer--list">
@@ -73,7 +74,7 @@
 		<div class="custom">
 			<h2>Szukasz<br />innego<br />szkolenia?</h2>
 			<a href="/contact"> SKONTAKTUJ SIĘ ZE MNĄ </a>
-			<img draggable="false" alt="yoga" src={yoga} loading="lazy" />
+			<img draggable="false" alt="yoga" aria-hidden="true" src={yoga} loading="lazy" />
 		</div>
 	</div>
 </section>
@@ -98,7 +99,8 @@
 		<h2>Konstruowanie i podpinanie pracowników organizacji pod misję, wizję i wartości.</h2>
 	</div>
 	<img
-		alt=""
+		alt="gradient"
+		aria-hidden="true"
 		style:transform={`translateY(${scroll * -1 * speed + 800}px)`}
 		class="gradient"
 		src={gradient}
@@ -190,7 +192,7 @@
 		}
 		> a {
 			@include button;
-			background-color: #eb5e28;
+			background-color: #9C3411;
 			width: 428px;
 			height: 117px;
 			font-size: 20px;
@@ -315,7 +317,7 @@
 
 		a {
 			@include button;
-			background-color: #eb5e28;
+			background-color: #9C3411;
 			width: 428px;
 			height: 117px;
 			font-size: 20px;

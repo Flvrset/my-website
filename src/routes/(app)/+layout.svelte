@@ -5,7 +5,7 @@
 	inject({mode: dev ? 'development' : 'production'});
 </script>
 
-<div class="navbar">
+<nav class="navbar">
 	<a href="/">HOME</a>
 	<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 	<div class="navbar__hrefs">
@@ -24,8 +24,10 @@
 			>
 		</a>
 	</div>
-</div>
-<slot />
+</nav>
+<main>
+	<slot />
+</main>
 
 <style lang="scss">
 	.navbar {

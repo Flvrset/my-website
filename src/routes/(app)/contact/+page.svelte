@@ -35,11 +35,11 @@
 		>
 			<div class="contact__fieldset">
 				{#if form?.missingName}
-					<p class="error">Jak mam się do Ciebie zwracać?</p>
+					<p class="error" id="missingName">Jak mam się do Ciebie zwracać?</p>
 				{:else if form?.missingContact}
-					<p class="error">Podaj, proszę wygodną dla Ciebie formę kontaktu.</p>
+					<p class="error" id="missingContact">Podaj, proszę wygodną dla Ciebie formę kontaktu.</p>
 				{:else if form?.missingMessage}
-					<p class="error">Śmiało, zostaw kilka słów!</p>
+					<p class="error" id="missingMessage">Śmiało, zostaw kilka słów!</p>
 				{/if}
 
 				<div class="form-group">
@@ -53,6 +53,7 @@
 							type="text"
 							placeholder="Twoje imię"
 							class={form?.missingName ? 'error-input' : ''}
+							aria-describedby="missingName"
 						/>
 					</div>
 				</div>
@@ -72,6 +73,7 @@
 								placeholder="Twój e-mail"
 								class={form?.missingContact ? 'error-input' : ''}
 								style="width: 100%;"
+								aria-describedby="missingContact"
 							/>
 						</div>
 					</div>
@@ -90,6 +92,7 @@
 								placeholder="Twój numer telefonu"
 								class={form?.missingContact ? 'error-input' : ''}
 								style="width: 145px;"
+								aria-describedby="missingContact"
 							/>
 						</div>
 					</div>
@@ -109,6 +112,7 @@
 							rows="5"
 							style="resize: none;"
 							class={form?.missingMessage ? 'error-input' : ''}
+							aria-describedby="missingMessage"
 						/>
 					</div>
 				</div>
@@ -214,7 +218,7 @@
 
 		&__button {
 			@include button;
-			background-color: #eb5e28;
+			background-color: #9C3411;
 			font-size: 20px;
 			letter-spacing: 0.055em;
 			position: relative;

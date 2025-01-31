@@ -26,7 +26,7 @@
 		</div>
 	</div>
 </section>
-<section class="colored--wide" style="background-color: #EB5E28;">
+<section class="colored--wide" style="background-color: #9C3411;">
 	<div class="container" style="min-height: 702px; align-items:flex-start">
 		<div class="support">
 			<h2>Kogo i jak wspieram?</h2>
@@ -168,7 +168,7 @@
 			}
 			&--contact {
 				display: flex;
-				background: #eb5e28;
+				background: #9C3411;
 				letter-spacing: 0.065em;
 				font-size: 0.875em;
 				@media screen and (max-width: 480px) {
@@ -265,7 +265,7 @@
 			text-decoration: none;
 			transition: 300ms ease;
 			&:hover {
-				color: #e2551f;
+				color: white;
 				transition: 300ms ease;
 			}
 			@media screen and (max-width: 480px) {
@@ -371,7 +371,7 @@
 		}
 
 		> a {
-			background-color: #eb5e28;
+			background-color: #9C3411;
 			letter-spacing: 0.055em;
 			transition: 0.2s ease-in-out;
 			@include button-big;

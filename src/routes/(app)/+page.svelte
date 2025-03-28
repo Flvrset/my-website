@@ -1,6 +1,5 @@
 <script>
     import { onMount } from 'svelte';
-	import heroImage from '$lib/images/hero-image.webp'; // Import your hero image here
 
     let isLoaded = false;
     

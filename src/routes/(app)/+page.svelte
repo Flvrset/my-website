@@ -35,7 +35,6 @@
         </div>
         
         <div class="hero__image-container" class:loaded={isLoaded}>
-            <!-- You can place an image here if available -->
             <div class="placeholder-image">
                 <div class="image-overlay"></div>
             </div>
@@ -57,7 +56,7 @@
                 Jestem Trenerem z dziesięcioletnim doświadczeniem w biznesie. <br />Tworzyłam autorską
                 koncepcję rozwoju Pracowników w organizacji. Specjalizuję się w konstruowaniu i prowadzeniu
                 szkoleń i warsztatów z umiejętności miękkich w różnych obszarach i na różnych poziomach
-                zaawansowania. Moderując spotkania wspieram zespoły w podejmowaniu decyzji i wychodzeniu z
+                zaawansowania. Moderując spotkania, wspieram zespoły w podejmowaniu decyzji i wychodzeniu z
                 impasu.
             </div>
         </div>
@@ -179,7 +178,7 @@
                 </div>
                 <div class="quotes__testimonial">
                     <div class="quotes__text">
-                        "Warsztaty jak zawsze na wysokim poziomie - świetna jakość materiałów, prowadząca jak
+                        "Warsztaty jak zawsze na wysokim poziomie — świetna jakość materiałów, prowadząca jak
                         zwykle przygotowana do perfekcji, dbająca o dobrą atmosferę. Super!"
                     </div>
                     <div class="quotes__author">— HR Manager</div>

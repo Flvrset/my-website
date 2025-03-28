@@ -483,8 +483,6 @@
                 width: 100%;
                 height: 100%;
                 background: url('$lib/images/hero.webp') center center/cover;
-                opacity: 0.6;
-                mix-blend-mode: luminosity;
             }
         }
     }
